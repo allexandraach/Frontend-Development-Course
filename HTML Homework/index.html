@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Achimov Alexandra-Elena">
+  <title>HTML Homework</title>
+
+  <style>
+    table {
+      border: 1px solid black;
+
+    }
+
+    .tg td {
+      border-color: black;
+      border-style: solid;
+      border-width: 1px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      overflow: hidden;
+      padding: 7px 7px;
+      word-break: normal;
+    }
+
+    .tg th {
+      border-color: black;
+      border-style: solid;
+      border-width: 1px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      overflow: hidden;
+      padding: 7px 7px;
+      word-break: normal;
+    }
+
+    .tg .tg-pb0m {
+      border-color: inherit;
+      text-align: center;
+      vertical-align: bottom
+    }
+
+    .tg .tg-5std {
+      border-color: inherit;
+      font-family: "Times New Roman", Times, serif !important;
+      font-size: 16px;
+      text-align: left;
+      vertical-align: bottom
+    }
+
+    .tg .tg-dmab {
+      border-color: inherit;
+      font-family: Georgia, serif !important;
+      font-weight: bold;
+      text-align: left;
+      vertical-align: bottom
+    }
+
+    .tg .tg-l73p {
+      border-color: inherit;
+      font-family: Georgia, serif !important;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle
+    }
+
+    .tg .tg-5stb {
+      border-color: inherit;
+      font-family: Georgia, serif !important;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: bottom
+    }
+
+    .radio-btn {
+      margin-bottom: -15px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Planets</h1>
+
+  <table class="tg">
+
+    <thead>
+      <tr>
+        <th class="tg-pb0m" colspan="2"></th>
+        <th class="tg-dmab">Name</th>
+        <th class="tg-dmab">Mass (10<sup>24</sup> kg)</th>
+        <th class="tg-dmab">Diameter (km)</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="tg-l73p" colspan="2" rowspan="4">Terrestrial&nbsp;&nbsp;&nbsp;planets</td>
+        <td class="tg-5stb">Mercury</td>
+        <td class="tg-5std">0.33</td>
+        <td class="tg-5std">4,879</td>
+      </tr>
+      <tr>
+        <td class="tg-5stb">Venus</td>
+        <td class="tg-5std">4.87</td>
+        <td class="tg-5std">12,104</td>
+      </tr>
+      <tr>
+        <td class="tg-5stb">Earth</td>
+        <td class="tg-5std">5.97</td>
+        <td class="tg-5std">12,756</td>
+      </tr>
+      <tr>
+        <td class="tg-5stb">Mars</td>
+        <td class="tg-5std">0.642</td>
+        <td class="tg-5std">6,792</td>
+      </tr>
+      <tr>
+        <td class="tg-l73p" rowspan="4">Jovian planets</td>
+        <td class="tg-l73p" rowspan="2">Gas giants</td>
+        <td class="tg-5stb">Jupiter</td>
+        <td class="tg-5std">1898</td>
+        <td class="tg-5std">142,984</td>
+      </tr>
+      <tr>
+        <td class="tg-5stb">Saturn</td>
+        <td class="tg-5std">568</td>
+        <td class="tg-5std">120,536</td>
+      </tr>
+      <tr>
+        <td class="tg-l73p" rowspan="2">Ice giants</td>
+        <td class="tg-5stb">Uranus</td>
+        <td class="tg-5std">86.8</td>
+        <td class="tg-5std">51,118</td>
+      </tr>
+      <tr>
+        <td class="tg-5stb">Neptune</td>
+        <td class="tg-5std">102</td>
+        <td class="tg-5std">49,528</td>
+      </tr>
+      <tr>
+        <td class="tg-5stb" colspan="2">Dwarf planets</td>
+        <td class="tg-5stb">Pluto</td>
+        <td class="tg-5std">0.0146</td>
+        <td class="tg-5std">2,370</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <br>
+
+  <form action="" method="get">
+
+    <fieldset>
+      <br>
+      <legend>Ask us about planets</legend>
+
+      <label for="full_name"> Full name: </label>
+      <input type="text" name="full_name" value="" required>
+
+      <p><label for="email"> Email:</label>
+        <input type="email" name="email" value="" required></p>
+
+      <p>Favorite planet:</p>
+
+      <p class="radio-btn"><input type="radio" name="planets" value="Mercury"> Mercury</p>
+      <p class="radio-btn"><input type="radio" name="planets" value="Venus"> Venus</p>
+      <p class="radio-btn"><input type="radio" name="planets" value="Earth" checked=""> Earth</p>
+      <p class="radio-btn"><input type="radio" name="planets" value="Mars"> Mars</p>
+      <p class="radio-btn"><input type="radio" name="planets" value="Jupiter"> Jupiter</p>
+      <p class="radio-btn"><input type="radio" name="planets" value="Saturn"> Saturn</p>
+      <p class="radio-btn"><input type="radio" name="planets" value="Uranus"> Uranus</p>
+      <p class="radio-btn"><input type="radio" name="planets" value="Neptune"> Neptune</p>
+      <p class="radio-btn"><input type="radio" name="planets" value="Pluto"> Pluto</p>
+
+      <br>
+
+      <p><input type="checkbox" name="agree" required> I agree to the <a href="...">terms and conditions</a></p>
+
+      <p><input type="reset" value="Reset">
+        <input type="submit" value="Ask away"></p>
+
+    </fieldset>
+
+  </form>
+
+</body>
+
+</html>
