@@ -1,0 +1,54 @@
+body{
+    background-color: cornflowerblue;
+}
+
+h1{
+    margin-bottom: 3px;
+}
+
+textarea{
+    width: 450px;
+    height: 116px;
+}
+
+label, p, h1{
+    color: white;
+}
+
+div > p{
+    padding-left: 80px;
+    padding-right: 80px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+form > p{
+    margin-top: 6px;
+}
+
+
+.form-container{
+    width: 650px;
+    padding: 20px;
+    padding-top: 0px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to top, #408ca0, #473383);
+}
+
+.user-input{
+    width: 450px;
+    height: 35px;
+    margin-top: 0.5px;
+    margin-bottom: 4px;
+}
+
+.submit-btn{
+    width: 455px;
+    padding: 13px;
+    color: white;
+    background-color: #0388ce;
+    border: 2px solid #036da5;
+}
