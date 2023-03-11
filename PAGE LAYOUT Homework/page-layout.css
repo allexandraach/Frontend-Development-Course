@@ -3,14 +3,27 @@
     padding: 0;
 }
 
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "section-1 section-1 section-1 section-1"
+    "section-2 section-2 section-2 section-2"
+    "section-3 section-3 section-3 section-3"
+    "section-4 section-4 section-4 section-4"
+    "aside aside aside aside"
+    "footer footer footer footer";
+}
+
 header{
-    grid: 1fr / 1fr;
+    grid-area: header;
     height: 500px;
     background-image: url("https://i.ibb.co/3CZG6Zp/image-header.jpg");
     background-size: cover;
     background-position: center;
     padding: 30px 20px;
 }
+
 
 
 .logo-nav-container{
@@ -40,10 +53,6 @@ header{
     align-items: center;
 }
 
-main{
-    grid: 1fr 1fr 1fr 1fr / 1fr 1fr;
-}
-
 h1{
     color: white;
     text-transform: uppercase;
@@ -51,6 +60,14 @@ h1{
 
 .arrow-img{
     margin-top: 50px;
+}
+
+.section.section-1{
+    grid-area: section-1;
+}
+
+.section.section-2{
+    grid-area: section-2;
 }
 
 .section.section-1, .section.section-2{
@@ -75,6 +92,7 @@ h2, p, .learn-more-btn{
 }
 
 .section.section-3{
+    grid-area: section-3;
     height: 600px;
     display: flex;
 }
@@ -119,7 +137,7 @@ h2, p, .learn-more-btn{
 }
 
 .section.section-4{
-    grid-column: span 2;
+    grid-area: section-4;
     background-color:#fffbf8;
     padding: 30px;
 }
@@ -148,18 +166,16 @@ h2, p, .learn-more-btn{
     color: black;
 }
 
-.section.section-5{
-    height: 500px;
+.aside-img{
+    grid-area: aside;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    overflow: hidden;
-}
-
-.section-5 img{
-    width: auto;
+    height: 500px;
+    font-size: 0;
 }
 
 footer{
+    grid-area: footer;
     background-color: #90d4c5;
     display: flex;
     flex-direction: column;
@@ -183,5 +199,4 @@ footer{
 
 .social-media-item{
     padding: 15px;
-
 }
