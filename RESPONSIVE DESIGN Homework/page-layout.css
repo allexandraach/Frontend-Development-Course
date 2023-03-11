@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "section-1 section-1 section-1 section-1"
+    "section-2 section-2 section-2 section-2"
+    "section-3 section-3 section-3 section-3"
+    "section-4 section-4 section-4 section-4"
+    "aside aside aside aside"
+    "footer footer footer footer";
+}
+
+header{
+    grid-area: header;
+    height: 500px;
+    background-image: url("https://i.ibb.co/3CZG6Zp/image-header.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 30px 20px;
+}
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-mobile{
+    display: none;
+}
+
+
+.nav-item{
+    color: white;
+    margin-left: 40px;
+}
+
+.nav-item.contact-btn{
+    color: black;
+    background-color: white;
+    border-radius: 40px;
+    padding: 12px 18px;
+}
+
+.banner-container{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    text-transform: uppercase;
+}
+
+.arrow-img{
+    margin-top: 50px;
+}
+
+.section.section-1{
+    grid-area: section-1;
+}
+
+.section.section-2{
+    grid-area: section-2;
+}
+
+.section.section-1, .section.section-2{
+    background-color:#fffbf8;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.transform-text, .stand-out-text{
+    background-color:#fffbf8;
+    padding: 40px;
+    margin: 40px;
+}
+
+.learn-more-btn{
+    color: black;
+    text-transform: uppercase;
+}
+
+h2, p, .learn-more-btn{
+    margin: 20px;
+}
+
+.section.section-3{
+    grid-area: section-3;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.graphic-design-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('https://i.ibb.co/SmNg7Nw/image-graphic-design.jpg');
+    background-size: cover;
+    padding: 30px;
+    text-align: center;
+
+}
+
+.photography-card{
+    background-image: url('https://i.ibb.co/N9LgBWH/image-photography.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    background-size: cover;
+
+}
+.graphic-design-card > h2{
+    color: #1e564b;
+}
+
+.graphic-design-card > p{
+    color: #4c8a7d;
+}
+
+.photography-card > h2{
+    color: #115273;
+}
+
+.photography-card > p{
+    color: #136695;
+}
+
+.section.section-4{
+    grid-area: section-4;
+    background-color:#fffbf8;
+    padding: 30px;
+}
+
+.section-4 > h2{
+    color: #a8a8a9;
+    padding: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.testimonies{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.testimonies img{
+    border-radius: 100%;
+}
+
+.client-name{
+    color: black;
+}
+
+.aside-img{
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 500px;
+    font-size: 0;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #90d4c5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.footer-nav-container{
+    margin: 30px;
+}
+
+.footer-nav-item{
+    color: #297062;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.social-media-container{
+    margin: 60px;
+}
+
+.social-media-item{
+    padding: 15px;
+}
+
+@media screen and (max-width: 640px) {
+
+    *{
+        height: auto; 
+    }
+    
+    header{
+        height: 700px;
+    }
+
+    .logo-img{
+        height: 44px;
+    }
+
+    .nav-mobile{
+        display: inline;
+    }
+
+    .nav-item{
+        display: none;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .section.section-1{
+        flex-direction: column-reverse;
+    }
+
+    .section.section-1, .section.section-2{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .transform-text > p, .stand-out-text > p{
+        margin: 40px 0px;
+    }
+
+    .section.section-3{
+        height: 1200px;
+        grid-template-columns: 1fr;
+    }
+
+    .graphic-design-card, .photography-card{
+        background-position: center;
+        padding: 40px;
+        flex-wrap: wrap;
+    }
+
+    .testimonies{
+        flex-wrap: wrap;
+        display: inline;
+    }
+
+    .first-testimony, .second-testimony, .third-testimony{
+        margin-bottom: 4rem;
+    }
+
+    .aside-img{
+        grid-template-columns: 1fr 1fr;
+        height: 700px;
+        font-size: 0;
+        
+    }
+
+    .footer-nav-container{
+        display: flex;
+    }
+
+    .footer-nav-item{
+        margin: 40px;
+    }
+    
+}

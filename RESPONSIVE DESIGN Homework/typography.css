@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+
+h1 {
+    font-family: 'Fraunces', serif;
+    letter-spacing: 5px;
+}
+
+.nav-item, p, .footer-nav-item{
+    font-family: 'Barlow', sans-serif;
+    text-decoration: none;
+}
+
+.nav-item.contact-btn{
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+}
+
+.learn-more-btn{
+    font-family: 'Fraunces', serif;
+    text-decoration: none;
+}
+
+p{
+    color:#a2a1a8;
+    line-height: 1.5;
+}
+
+.section-4 > h2{
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.client-name {
+    font-family: 'Fraunces', serif;
+}
+
+@media screen and (max-width: 640px){
+
+p, a{
+    font-size: 1.4rem;
+}
+
+h1{
+    font-size: 3.2rem;
+    letter-spacing: 8px;
+}
+
+
+h2{
+    font-size: 2.5rem;
+}
+
+}
+
