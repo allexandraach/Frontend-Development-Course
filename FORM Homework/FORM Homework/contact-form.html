@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Achimov Alexandra-Elena">
+    <title>Contact us Form</title>
+    <link rel="stylesheet" href="contact-form.css">
+    <link rel="stylesheet" href="typography.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+
+        <h1>Contact Us</h1>
+
+        <p>Got a question? We'd love to hear from you. Send us a message
+             and we'll respond as soon as possible.</p>
+
+        <br>
+
+        <form action="submit" method="post">
+
+            <label for="text">Name*</label>
+            <p><input class="user-input" type="text" required></p>
+            <label for="email">Email address*</label>
+            <p><input class="user-input" type="email" name="email" id="email" required></p>
+            <label for="textarea">Message</label>
+            <p><textarea> </textarea></p>
+            <p><button class="submit-btn" type="submit">Send Message</button></p>
+
+        </form>
+
+    </div>
+    
+</body>
+</html>
