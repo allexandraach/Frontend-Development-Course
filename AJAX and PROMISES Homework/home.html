@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Achimov Alexandra-Elena">
+    <title>Ajax & Promises Homework</title>
+
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="typography.css">
+</head>
+
+<body>
+    <div class="title-container">
+        <h1>Ajax & Promises Homework</h1>
+    </div>
+
+    <div class="btn-container">
+        <button class="btn" id="load-btn">Load Questions</button>
+        <button class="btn" id="add-btn" ">Add Question</button>
+        <button class="btn" id="edit-btn">Edit Question</button>
+        <button class="btn" id="delete-btn">Delete Question</button>
+    </div>
+
+    <form action="" method="POST" id="form">
+
+        <fieldset>
+            <legend>Enter the following data</legend>
+
+            <label for="id"> ID:</label>
+            <input type="number" name="id" id="id" class="input" required>
+            <p><label for="question"> Question: </label>
+                <input type="text" name="question" value="" class="input" required>
+            </p>
+
+            <p><label for="difficulty"> Difficulty:</label>
+                <input type="text" name="difficulty" class="input" required>
+            </p>
+            <p><label for="category"> Category:</label>
+                <input type="text" name="difficulty" class="input" required>
+            </p>
+
+            <p><label for="responses"> Responses:</label>
+            <p><label for="id"> ID:</label>
+                <input type="number" name="id" id="id" class="input" required>
+                <label for="response"> Response 1:</label>
+                <input type="text" name="response" value="response" class="input" required>
+                <input type="text" name="isCorrect" value="isCorrect" class="input" required>
+            </p>
+
+            <label for="id"> ID:</label>
+            <input type="number" name="id" id="id" class="input" required>
+            <label for="response"> Response 2:</label>
+            <input type="text" name="response" value="response" class="input" required>
+            <input type="text" name="isCorrect" value="isCorrect" class="input" required>
+
+            <label for="id"> ID:</label>
+            <input type="number" name="id" id="id" class="input" required>
+            <label for="response"> Response 3:</label>
+            <input type="text" name="response" value="response" class="input" required>
+            <input type="text" name="isCorrect" value="isCorrect" class="input" required></p>
+
+        </fieldset>
+    </form>
+
+    <br>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
