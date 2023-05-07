@@ -1,0 +1,9 @@
+div {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    line-height: 2;
+}
+
+.hide {
+    display: hidden;
+}

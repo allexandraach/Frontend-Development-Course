@@ -1,0 +1,31 @@
+
+<div *ngFor="let data of patientsList">
+    <h3>{{data.id}}. {{data.name}}</h3> 
+    
+    BMI: {{ data.weight | bmiCalculator: data.height }}
+
+    <p> <button (click)="displayDetails(data)">More details</button></p>
+    <div [hidden]="!data.showDetails">
+
+        {{data.height}}m,{{data.weight}}kg
+
+        <span blueHighlight *ngIf="data.weight/(data.height *
+            data.height) >= 18.5 && data.weight/(data.height *
+            data.height) < 25"> normal </span>
+        <span redHighlight *ngIf="data.weight/(data.height *
+            data.height) < 18.5"> underweight </span>
+        <span redHighlight *ngIf="data.weight/(data.height *
+            data.height) >= 25 && data.weight/(data.height *
+            data.height) < 30"> overweight </span>
+            <span redHighlight *ngIf="data.weight/(data.height *
+            data.height) > 30"> obese </span>
+
+
+        <p><label for="weight">New Weight: </label></p>
+        <input type="text" id="weight" value="" [(ngModel)]="newWeight" (ngModelChange)="getNewWeight()"> kg
+        <p>
+        <span *ngIf="data.showDetails">NEW BMI: {{ newWeight | bmiCalculator: data.height }}</span></p>
+
+    </div>
+
+</div>
