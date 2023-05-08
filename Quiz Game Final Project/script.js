@@ -1,88 +1,113 @@
-const userInDatabase = 'http://localhost:3000/users';
-
-const loginBtn = document.getElementsByClassName("btn btn-primary btn-block fa-lg gradient-custom-2 mb-3")[0];
-const createAccountBtn = document.getElementsByClassName("btn btn-outline-danger")[0];
-const registerForm = document.getElementById("registerContainer");
-const loginForm = document.getElementById("loginFormContainer");
-const registerBtn = document.getElementById("registerBtn");
-
-let data;
+// in the file I wrote all the code that is global and that I will use across the  multiple js files in my project
 
 
-loginBtn.addEventListener("click", () => {
-    // const dataFromUser = new User(usernameFromUser, passwordFromUser)
-
-    const usernameFromUser = document.getElementById("form2Example11").value;
-    const passwordFromUser = document.getElementById("form2Example22").value;
-
-    fetch(`${userInDatabase}?username=${usernameFromUser}&password=${passwordFromUser}`)
-        .then(response => { console.log(response.json()) })
-        .then(data => { checkData(JSON.parse(data)) })
-        .catch(error => console.log('Error: ' + error));
-
-    hideElem();
-})
-
-function checkData(serverData) {
-
-    if (serverData.includes(usernameFromUser, passwordFromUser)) {
-        alert("Login successfully!")
-    } else {
-        alert("Login failed!")
-    }
-}
-
-
-createAccountBtn.addEventListener("click", () => {
-    hideElem(loginForm);
-    displayElem(registerForm);
-
-});
-
+const apiUsers = 'http://localhost:3000/users';
+const apiQuestionsEN = 'http://localhost:3000/questionsEN';
 
 function hideElem(toHide) {
-    toHide.style.display = "none";
+    toHide.classList.add("no-display");
     return;
 };
 
 function displayElem(toDisplay) {
     toDisplay.classList.remove("no-display");
+    return;
 }
 
-function register() {
+// make these variables and functions available across all js files
 
-}
+window.apiUsers = apiUsers;
+window.apiQuestionsEN = apiQuestionsEN;
 
-function login() {
+window.displayElem = displayElem;
+window.hideElem = hideElem;
 
-}
+// class User {
+//     username;
+//     password;
+//     email;
+
+//     constructor(username, password, email) {
+//         this.username = username;
+//         this.password = password;
+//         this.email = email;
+//     }
+
+// login() {
 
 
-class User {
-    #username;
-    #password;
-    #email;
+// }
 
-    constructor(username, password, email) {
-        this.#email = email;
-        this.#username = username;
-        this.#password = password;
-    }
+//     deleteAccount(){
+
+//     fetch(`${apiUsers}?username=${this.loggedUser.username}`, {
+//         method: "DELETE",
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(this.user)
+//     })
+//         .then(response => response.json())
+//         .then(data => console.log(data))
+//         .catch(error => console.log('Error: ' + error))
+//     }}
 
 
-    getUsername() {
-        return this.#username;
-    }
+// export default 
 
-    getPassword() {
-        return this.#password;
-    }
+// class User {
+//     username;
+//     password;
+//     email;
 
-    login(username, password) {
-        if (username === this.username && password === this.password) {
-            return alert("Login successfully");
-        } else {
-            return alert("Login failed");
-        }
-    }
-}
+//     constructor(username, password, email) {
+//         this.username = username;
+//         this.password = password;
+//         this.email = email;
+//     }
+
+//     deleteAccount(){
+
+//     fetch(`${apiUsers}`, {
+//         method: "DELETE",
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(this.user)
+//     })
+//         .then(response => response.json())
+//         .then(data => console.log(data))
+//         .catch(error => console.log('Error: ' + error))
+//     }
+
+    
+
+    // getEmail() {
+    //     return this.#email;
+    // }
+
+    // getUsername() {
+    //     return this.#username;
+    // }
+
+    // getPassword() {
+    //     return this.#password;
+    // }
+
+    // setEmail(email) {
+    //     return this.#email;
+    // }
+
+    // setUsername(username) {
+    //     return this.#username;
+    // }
+
+    // setPassword(password) {
+    //     return this.#password;
+    // }
+
+    //     login {
+
+    // }
+
+// }

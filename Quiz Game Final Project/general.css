@@ -1,86 +1,48 @@
-.no-display {
-    display: none;
-}
-
-/* * {
+* {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #A9C9FF;
-    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
-    background-attachment: fixed;
+    overflow: hidden;
 }
 
-.title-container {
-    background-image: url('https://wallpapercave.com/wp/wp2681845.jpg');
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin-top: 1.2em;
-    padding: 40px;
-}
-
-.image-container {
-    display: flex;
-    justify-content: center;
+.theme-light {
+    --color-primary: yellowgreen;
+    --color-secondary: floralwhite;
+    --color-accent: yellowgreen;
+    --font-color: #000000;
+    --background-color: #a2d0444d;
+    --background-gradient: 117deg, rgba(123, 216, 96, 1) 39.2%, rgba(255, 255, 255, 1) 156.2%;
 
 }
 
-#quiz-img {
-    animation: quiz-icon-swing 1s linear none infinite;
+.theme-dark {
+    --color-primary: #496925;
+    --color-secondary: #666666;
+    --color-accent: yellowgreen;
+    --font-color: #ffffff;
+    --background-color: #3f4e214d;
 }
 
-@keyframes quiz-icon-swing {
-    20% {
-        transform: rotate(15deg);
-    }
-
-    40% {
-        transform: rotate(-10deg);
-    }
-
-    60% {
-        transform: rotate(5deg);
-    }
-
-    80% {
-        transform: rotate(-5deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
+.no-display {
+    /* used !important because I do not want the display properties
+    on the parent element overide this property */
+    display: none!important;
 }
 
-.btn-container {
-    margin-top: 2.5em;
-    display: flex;
-    justify-content: center;
+.btn-style {
+    background-color: transparent;
+    border: none;
 }
-
-#login-btn,
-#register-btn {
-    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4 51%, #E55D87 100%);
-    margin: 10px;
-    padding: 15px 45px;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;
-    border-radius: 10px;
-    border-color: whitesmoke;
-}
-
-#login-btn:hover,
-#register-btn:hover {
-    background-position: right center;
-} */
 
 
 body {
     background-color: #eeeeee;
 }
+
+/* TRIED TO CHANGE THE BACKGROUND IMAGE OF THE LOGIN & REGISTER INTERFACES AND ALSO ADJUST HOW THE REGISTER
+CONTAINER IS BEING DISPLAYED BUT WITHOUT SUCCES; TO DO IN THE FUTURE */
 
 .gradient-custom-2 {
     /* fallback for old browsers */
@@ -113,20 +75,327 @@ body {
 .gradient-custom-3 {
     /* fallback for old browsers */
     background: #84fab0;
-    
+
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
-    
+
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
-    }
-    .gradient-custom-4 {
+}
+
+.gradient-custom-4 {
     /* fallback for old browsers */
     background: #84fab0;
-    
+
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
-    
+
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+}
+
+#registerContainer2 {
+    width: -webkit-fill-available !important;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas:
+        "head head head"
+        "nav section section"
+        "foot foot foot";
+    grid-template-rows: 7.6rem 34rem 9rem;
+    grid-template-columns: 13rem 1fr;
+}
+
+header {
+    grid-area: head;
+
+}
+
+#headerNav {
+    padding: 1rem;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--color-primary);
+}
+
+h1 {
+    margin-top: 1rem;
+}
+
+#icon-item-container {
+    display: flex;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(10deg);
+
     }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+
+    }
+}
+
+.icon-item {
+    margin: 1rem 2rem;
+    text-align: center;
+}
+
+.icon-item:hover {
+    animation: swing 1s linear none infinite;
+
+}
+
+.icon-item:hover div {
+    visibility: visible;
+
+}
+
+.icon-text {
+    text-align: center;
+    visibility: hidden;
+    padding-top: 3px;
+}
+
+nav {
+    grid-area: nav;
+    height: inherit;
+
+}
+
+#sidenav-container {
+    height: auto;
+    padding-top: 40px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-secondary);
+}
+
+.btn-style {
+    padding-left: 14px;
+    padding-bottom: 14px;
+}
+
+button:hover {
+    color: var(--color-accent);
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.active-dropdown {
+    background-color: var(--color-primary);
+}
+
+.dropdown-container>p:hover {
+    background-color: #81aa53;
+}
+
+#deleteAccBtn {
+    color: red;
+}
+
+.caret-down-icon {
+    height: 18px;
+    display: inline;
+    float: right;
+    padding-left: 34px;
+}
+
+section {
+    background-color: var(--background-color);
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#playBtnContainer {
+    display: flex;
+    flex: auto;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+}
+
+#playBtn,
+#startQuizBtn,
+#findResultBtn {
+
+    background-image: linear-gradient(to right, #ADD100 0%, #7B920A 51%, #ADD100 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border: transparent;
+    border-radius: 10px;
+    display: block;
+
+}
+
+#playBtn:hover,
+#startQuizBtn:hover,
+#findResultBtn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+#beforeQuizContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#startQuizBtn {
+    margin-top: 4rem;
+}
+
+#questionsContainer {
+    width: 38rem;
+    background-image: linear-gradient(var(--background-gradient));
+
+}
+
+#questionsContainer p {
+    padding: 1rem;
+    margin: 1rem;
+
+}
+
+#countdown {
+    display: flex;
+    justify-content: right;
+
+}
+
+
+input[type="radio"] {
+    padding: 4px;
+    margin: 8px;
+}
+
+footer {
+    background-color: var(--color-secondary);
+    grid-area: foot;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: var(--font-color);
+}
+
+footer a:hover {
+    color: gray;
+}
+
+
+.link-item {
+    padding: 3rem;
+    margin-bottom: 4rem;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 962px) {
+
+    /* TO DO IN THE FUTURE: MAKE THE PROJECT INTERFACE FULLY RESPONSIVE ON TABLETS AS WELL */
+
+}
+
+@media screen and (max-width: 720px) {
+
+    body {
+        overflow: unset;
+    }
+
+
+    #grid-container {
+        height: fit-content;
+        display: grid;
+        grid-template-areas:
+            "head nav nav"
+            "section section section"
+            "section section section"
+            "foot foot foot";
+        grid-template-rows: 1fr 4.6fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    #headerNav,
+    section {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    h1 {
+        display: inline-flex;
+    }
+
+
+    #sidenav-container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--color-primary);
+    }
+
+    .toggle-menu {
+        height: 30px;
+    }
+
+    section {
+        flex: auto;
+    }
+
+    footer {
+        height: min-content;
+    }
+
+
+    .icon-item {
+        margin-top: 24px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .active-dropdown {
+        background-color: var(--color-secondary);
+    }
+
+    button:hover {
+        color: var(--font-color);
+    }
+
+    .link-item {
+        margin-bottom: 1rem;
+    }
+
+}
