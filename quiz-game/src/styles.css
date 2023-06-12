@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.theme-light {
+    --color-primary: yellowgreen;
+    --color-secondary: floralwhite;
+    --color-accent: yellowgreen;
+    --font-color: #000000;
+
+}
+
+.theme-dark {
+    --color-primary: #34560e;
+    --color-secondary: #474747;
+    --color-accent: yellowgreen;
+    --font-color: #ffffff;
+}
+
+#grid-container {
+    /* height: fit-content;
+    width: 100vw; */
+    display: grid;
+    grid-template-areas:
+        "head head head"
+        "nav section section"
+        "foot foot foot";
+    grid-template-rows: 6rem 30rem 9rem;
+    grid-template-columns: 14rem 1fr;
+}
+
+.no-display {
+    display: none;
+}
+
+

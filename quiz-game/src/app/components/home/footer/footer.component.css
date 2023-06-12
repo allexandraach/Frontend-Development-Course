@@ -1,0 +1,22 @@
+footer {
+    background-color: floralwhite;
+    grid-area: foot;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: #000000;
+}
+
+footer a:hover {
+    color: gray;
+}
+
+
+.link-item {
+    padding: 1rem;
+    margin: 1rem;
+    text-decoration: none;
+}

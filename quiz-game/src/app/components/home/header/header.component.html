@@ -1,0 +1,16 @@
+<div id="grid-container">
+
+    <header id="header-nav">
+        <h1>Welcome, {{loggedUser}} </h1>
+        <div id="icon-item-container">
+            <div class="icon-item" (click)="toggleTheme()" [ngClass]="isDarkTheme ? 'theme-dark' : 'theme-light'">
+                <img src="https://svgshare.com/i/sSw.svg" alt="theme-icon" height="30em">
+            </div>
+            <div class="icon-item">
+                <img src="https://svgshare.com/i/sRL.svg" alt="language-icon" height="30em">
+            </div>
+            <div class="icon-item">
+                <img src="https://svgshare.com/i/sSJ.svg" onclick="displayFeedbackForm()" alt="feedback-icon" height="30em">
+            </div>
+        </div>
+    </header>
