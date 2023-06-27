@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+ *{
+    margin:0;
+    padding: 0;
+    text-align: center;
+ }
+
+ body {
+    background-color: floralwhite;
+ }
+
+h1 {
+    color: rgb(119, 0, 255);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px blue;
+    
+}
+
+button{
+    padding: 20px;
+    background-color: indigo;
+    color: white;
+    border-radius: 30%;
+}
+
+button:hover {
+    background-color: rgb(118, 48, 168);
+}
+

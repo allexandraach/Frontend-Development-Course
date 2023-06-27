@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "questionsEN": [
     {
@@ -2140,4 +2141,2148 @@
 
 
   ]
+=======
+{
+  "questionsEN": [
+    {
+      "id": 1,
+      "question": "Which was the largest empire ever seen?",
+      "difficulty": "Easy",
+      "category": "History",
+      "responses": [
+        {
+          "id": 1,
+          "response": "French Empire",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Roman Empire",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "British Empire",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Who was the first president of the United States of America?",
+      "difficulty": "Easy",
+      "category": "History",
+      "responses": [
+        {
+          "id": 1,
+          "response": "George Washington",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Benjamin Franklin",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Thomas Jefferson",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Who was the first human to step on the Moon?",
+      "difficulty": "Easy",
+      "category": "History",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Carl Sagan",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Neil Armstrong",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Yuri Gagarin",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "What was the name of the first atomic bomb?",
+      "difficulty": "Easy",
+      "category": "History",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Fat Man",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Little Boy",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Big Kid",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Which was the first democratic state in the world?",
+      "difficulty": "Easy",
+      "category": "History",
+      "responses": [
+        {
+          "id": 1,
+          "response": "France",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "United States of America",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Athens",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Who is the most famous philosopher of all times?",
+      "difficulty": "Easy",
+      "category": "Philosophy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Socrates",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Sun Tzu",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Aristotle",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Who is considered the father of Nihilism?",
+      "difficulty": "Easy",
+      "category": "Philosophy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Friedrich Wilhelm Nietzsche",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Albert Camus",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Jacques Derrida",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Who is the most influential Chinese philosopher of all times?",
+      "difficulty": "Easy",
+      "category": "Philosophy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Sun Tzu",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Confucius",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Lao Tzu",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Who is considered to be the father of Existentialism?",
+      "difficulty": "Easy",
+      "category": "Philosophy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Karl Jaspers",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Simone de Beauvoir",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Søren Kierkegaard",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Who is the most influential Ancient Indian philosopher?",
+      "difficulty": "Easy",
+      "category": "Philosophy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Śāriputra",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Pingala",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Gautama Buddha",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "question": "What is the most read book in the world?",
+      "difficulty": "Easy",
+      "category": "Literature",
+      "responses": [
+        {
+          "id": 1,
+          "response": "White Fang",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Romeo and Juliet",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "the Bible",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "question": "Who is the most famous author of all times?",
+      "difficulty": "Easy",
+      "category": "Literature",
+      "responses": [
+        {
+          "id": 1,
+          "response": "William Shakespeare",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Ernest Hemingway",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "J. K. Rowling",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "question": "Who is the most popular female writer of all times?",
+      "difficulty": "Easy",
+      "category": "Literature",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Jane Austen",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Charlotte Brontë",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Mary Shelley",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "question": "Who is the most popular contemporary Romanian author?",
+      "difficulty": "Easy",
+      "category": "Literature",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Adrian Paunescu",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Mircea Cartarescu",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Ion Minulescu",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "question": "Who is the best selling novelist of all times?",
+      "difficulty": "Easy",
+      "category": "Literature",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Arthur Conan Doyle",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Charles Bukowski",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Agatha Christie",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "question": "Who is the father of psychoanalysis?",
+      "difficulty": "Easy",
+      "category": "Psychology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Wilhelm Reich",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Erik Erikson",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Sigmund Freud",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "question": "Who invented The Oedipus complex and Electra Complex respectively?",
+      "difficulty": "Easy",
+      "category": "Psychology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Ivan Pavlov",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "William James",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Sigmund Freud",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "question": "Which is the first written theory on links between personality and health known today?",
+      "difficulty": "Easy",
+      "category": "Psychology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Jungian archetypes",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Attachment Theory",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Four Temperament Theory",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "question": "Who is the most famous psychologist ever?",
+      "difficulty": "Easy",
+      "category": "Psychology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Sigmund Freud",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Carl Rogers",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Carl Jung",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "question": "What is the most-common mental disorder nowadays?",
+      "difficulty": "Easy",
+      "category": "Psychology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Borderline Personality Disorder",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Bipolar Disorder",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Anxiety",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "question": "Which country has the largest population in the world?",
+      "difficulty": "Easy",
+      "category": "Geography",
+      "responses": [
+        {
+          "id": 1,
+          "response": "China",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "United States",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "India",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "question": "Which city is the biggest metropolis in the world?",
+      "difficulty": "Easy",
+      "category": "Geography",
+      "responses": [
+        {
+          "id": 1,
+          "response": "New York",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Tokyo",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "London",
+          "isCorrect": false
+        }
+      ]
+    },
+
+    {
+      "id": 23,
+      "question": "What is the name of the largest country in the world?",
+      "difficulty": "Easy",
+      "category": "Geography",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Russia",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "China",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Mongolia",
+          "isCorrect": false
+        }
+      ]
+    },
+
+    {
+      "id": 24,
+      "question": "What is the smallest capital city in Europe?",
+      "difficulty": "Easy",
+      "category": "Geography",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Valletta",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "San Marino",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Tirana",
+          "isCorrect": false
+        }
+      ]
+    },
+
+    {
+      "id": 25,
+      "question": "What is the name of the smallest country in the world?",
+      "difficulty": "Easy",
+      "category": "Geography",
+      "responses": [
+        {
+          "id": 1,
+          "response": "San Marino",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Liechtenstein",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Vatican City",
+          "isCorrect": true
+        }
+      ]
+    },
+
+    {
+      "id": 26,
+      "question": "Which is the most traded currency in the world?",
+      "difficulty": "Easy",
+      "category": "Economics",
+      "responses": [
+        {
+          "id": 1,
+          "response": "US Dollar",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Japanese Yen",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Chinese Yuan",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "question": "Which country exports the most?",
+      "difficulty": "Easy",
+      "category": "Economics",
+      "responses": [
+        {
+          "id": 1,
+          "response": "United States of America",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "China",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Germany",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "question": "Which country has the largest economy in Europe?",
+      "difficulty": "Easy",
+      "category": "Economics",
+      "responses": [
+        {
+          "id": 1,
+          "response": "United Kingdom",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Germany",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "France",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "question": "What is the name of the wealthiest city in the world?",
+      "difficulty": "Easy",
+      "category": "Economics",
+      "responses": [
+        {
+          "id": 1,
+          "response": "New York",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Tokyo",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "London",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "question": "Which country imports the most?",
+      "difficulty": "Easy",
+      "category": "Economics",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Germany",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "China",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "United States of America",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "question": "What is the name of the highest mountains in the world?",
+      "difficulty": "Easy",
+      "category": "Geology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Hindu Kush",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Kilimanjaro",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Himalayas",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "question": "Which is the smallest continent in the world?",
+      "difficulty": "Easy",
+      "category": "Geology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Australia",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Oceania",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Asia",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "question": "Which is the largest ocean basin in the world?",
+      "difficulty": "Easy",
+      "category": "Geology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Indian Ocean",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Atlantic Ocean",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Pacific Ocean",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "question": "Which is the largest continent on Earth?",
+      "difficulty": "Easy",
+      "category": "Geology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "America",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Asia",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Africa",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "question": "What is the name of the deepest oceanic trench on Earth?",
+      "difficulty": "Easy",
+      "category": "Geology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "South Sandwich",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Puerto Rico",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Mariana",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "question": "What is the name of the first modern humans?",
+      "difficulty": "Easy",
+      "category": "Biology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Homo Neanderthalensis",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Homo Erectus",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Homo Sapiens",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "question": "Which is the biggest animal on Earth?",
+      "difficulty": "Easy",
+      "category": "Biology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Elephant",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Blue Whales",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Cachalot",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "question": "Which animal is considered the laziest animal in the world?",
+      "difficulty": "Easy",
+      "category": "Biology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Sloth",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Panda Bear",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Koala Bear",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "question": "Which is the smartest animal in the ocean?",
+      "difficulty": "Easy",
+      "category": "Biology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Sea Otter",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Delphin",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Killer Whale",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "question": "Which is the fastest animal in the world?",
+      "difficulty": "Easy",
+      "category": "Biology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Hyena",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Leopard",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Cheetah",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "question": "Which is the largest planet in our solar system?",
+      "difficulty": "Easy",
+      "category": "Astronomy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Neptune",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Jupiter",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Uranus",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "question": "Which is the coldest planet from our solar system?",
+      "difficulty": "Easy",
+      "category": "Astronomy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Neptune",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Jupiter",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Uranus",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "question": "Which is the fastest thing in the Universe?",
+      "difficulty": "Easy",
+      "category": "Astronomy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Light",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Sound",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Electricity",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "question": "What planet from our solar system is most similar to Earth?",
+      "difficulty": "Easy",
+      "category": "Astronomy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Mars",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Venus",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Mercury",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "question": "Which is the hottest planet in our solar system?",
+      "difficulty": "Easy",
+      "category": "Astronomy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Mars",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Venus",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Mercury",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "question": "Which is the oldest continuous dynasty in the world?",
+      "difficulty": "Medium",
+      "category": "History",
+      "responses": [
+        {
+          "id": 1,
+          "response": "the Imperial House of Japan (Yamato Dynasty)",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Chola Dynasty",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Qin Dynasty",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "question": "Who was the first man to circumnavigate the world?",
+      "difficulty": "Medium",
+      "category": "History",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Christopher Columbus",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Fernando Magellan",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Marco Polo",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "question": "Which country in the world was the first to give women the right to vote?",
+      "difficulty": "Medium",
+      "category": "History",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Australia",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "New Zealand",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Russia",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "question": "Where did the first civilization appear?",
+      "difficulty": "Medium",
+      "category": "History",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Scandinavia",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Egypt",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Mesopotamia",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "question": "What is the oldest monument in the world?",
+      "difficulty": "Medium",
+      "category": "History",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Göbekli Tepe",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Stonehenge",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Great Pyramid of Giza",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "question": "Who was one of the foremost thinkers of the Enlightenment?",
+      "difficulty": "Medium",
+      "category": "Philosophy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Montesquieu",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Albert Camus",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Francis Bacon",
+          "isCorrect": false
+        }
+      ]
+    },
+
+    {
+      "id": 52,
+      "question": "Who is considered to be the first female philosopher?",
+      "difficulty": "Medium",
+      "category": "Philosophy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Hypatia of Alexandria",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Mary Wollstonecraft",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Simone de Beauvoir",
+          "isCorrect": false
+        }
+      ]
+    },
+
+    {
+      "id": 53,
+      "question": "Who is known as the father of modern philosophy?",
+      "difficulty": "Medium",
+      "category": "Philosophy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Blaise Pascal",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "René Descartes",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Immanuel Kant",
+          "isCorrect": false
+        }
+      ]
+    },
+
+    {
+      "id": 54,
+      "question": "Who was the greatest Eastern philosopher?",
+      "difficulty": "Medium",
+      "category": "Philosophy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Lao Tzu",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Sun Tzu",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Confucius",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "question": "Who is a notoriously difficult philosopher to understand?",
+      "difficulty": "Medium",
+      "category": "Philosophy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Georg Wilhelm Friedrich Hegel",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Martin Heidegger",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Friedrich Wilhelm Nietzsche",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "question": "Who is the most important Russian poet?",
+      "difficulty": "Medium",
+      "category": "Literature",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Aleksandr Pușkin",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Ivan Turgenez",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Anton Chekhov",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "question": "Which is the longest novel in the world?",
+      "difficulty": "Medium",
+      "category": "Literature",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Karamazov Brothers",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Remembrance of Things Past",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "The Tale of Genji",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "question": "Who is the most popular French writer?",
+      "difficulty": "Medium",
+      "category": "Literature",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Emile Zola",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Victor Hugo",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Gustave Flaubert",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "question": "Which is the most famous fictional character in the world?",
+      "difficulty": "Medium",
+      "category": "Literature",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Harry Potter",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Robin Hood",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Sherlock Holmes",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "question": "What is the name of the first book ever written?",
+      "difficulty": "Medium",
+      "category": "Literature",
+      "responses": [
+        {
+          "id": 1,
+          "response": "The Quran",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "The Bible",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "The Epic of Gilgamesh",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "question": "Which is the most common personality disorder?",
+      "difficulty": "Medium",
+      "category": "Psychology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Borderline Personality Disorder",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Narcissistic Personality Disorder",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Obsessive-Compulsive personality disorder",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "question": "Which is the most common mental disorder in the world?",
+      "difficulty": "Medium",
+      "category": "Psychology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Anxiety",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Depression",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Paranoia",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "question": "Which is the most powerful emotion we feel?",
+      "difficulty": "Medium",
+      "category": "Psychology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Love",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Fear",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Anger",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "question": "Which is the most serious mental illness?",
+      "difficulty": "Medium",
+      "category": "Psychology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Bipolar Disorder",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Schizophrenia",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Dissociative Personality Disorder",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "question": "What is the most uncommon mental disorder?",
+      "difficulty": "Medium",
+      "category": "Psychology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Dissociative Identity Disorder",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Schizophrenia",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Antisocial Personality Disorder",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "question": "Which is the city that has the highest population density in the world?",
+      "difficulty": "Medium",
+      "category": "Geography",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Manila",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Amsterdam",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Bern",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "question": "Which was the first language in the world?",
+      "difficulty": "Medium",
+      "category": "Geography",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Egyptian (hieroglyphs)",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Sanskrit",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Arabic",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "question": "Which country is the most religious country in Europe?",
+      "difficulty": "Medium",
+      "category": "Geography",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Greece",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Romania",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Malta",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "question": "Which is the most spoken language in the world?",
+      "difficulty": "Medium",
+      "category": "Geography",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Arabic",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Chinese",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "English",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "question": "Which is the largest religion in the world?",
+      "difficulty": "Medium",
+      "category": "Geography",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Islam",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Christianity",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Judaism",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "question": "Which is the oldest active volcano on Earth?",
+      "difficulty": "Medium",
+      "category": "Geology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Etna",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Vezuvius",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Jackson",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "question": "Which sea has highest salinity rate?",
+      "difficulty": "Medium",
+      "category": "Geology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Red Sea",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Dead Sea",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Black Sea",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "question": "Which is the name of the driest desert on Earth?",
+      "difficulty": "Medium",
+      "category": "Geology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Sahara",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Atacama",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Gobi",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "question": "What is the name of the largest lake in the world?",
+      "difficulty": "Medium",
+      "category": "Geology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Lake Superior",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Lake Baikal",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Caspian Sea",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "question": "Which is the toughest material on Earth?",
+      "difficulty": "Medium",
+      "category": "Geology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Tungsten Carbide",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Titanium",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Diamond",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "question": "Which country invented paper money?",
+      "difficulty": "Medium",
+      "category": "Economics",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Mesopotamia",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "India",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "China",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "question": "Who is considered to be the father of economics?",
+      "difficulty": "Medium",
+      "category": "Economics",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Adam Smith",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "John Stuart Mill",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "John Maynard Keynes",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "question": "Which is the name of the first capitalist country in the world?",
+      "difficulty": "Medium",
+      "category": "Economics",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Great Britain",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "United States of America",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Germany",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "question": "Which country is the richest in the world?",
+      "difficulty": "Medium",
+      "category": "Economics",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Switzerland",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Luxembourg",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Singapore",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "question": "Which is the most socialist country in the world?",
+      "difficulty": "Medium",
+      "category": "Economics",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Russia",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "China",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Sweden",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "question": "Which is the earliest form of life we know of?",
+      "difficulty": "Medium",
+      "category": "Biology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Protozoa",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Bacteria",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Prokaryotes",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "question": "Which is the longest bone in the human body?",
+      "difficulty": "Medium",
+      "category": "Biology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Femur",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Tibia",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Fibula",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "question": "Which animal is the longest living animal?",
+      "difficulty": "Medium",
+      "category": "Biology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Bowhead whale",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Sperm whale",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Tortoises",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "question": "Which is the largest organ in the human body?",
+      "difficulty": "Medium",
+      "category": "Biology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Lungs",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Liver",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Skin",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "question": "Which is the only organ in the human body that can regenerate itself?",
+      "difficulty": "Medium",
+      "category": "Biology",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Stomach",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Liver",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Skin",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "question": "Which is the name of the brightest star in the night sky?",
+      "difficulty": "Medium",
+      "category": "Astronomy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Canopus",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Venus",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Sirius (Dog Star)",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "question": "Which is the name of the galaxy closest to the Milky Way?",
+      "difficulty": "Medium",
+      "category": "Astronomy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Large Magellanic Cloud",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "response": "Andromeda",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "response": "Triangulum Galaxy",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "question": "Which is the name of the fastest planet in our Solar System?",
+      "difficulty": "Medium",
+      "category": "Astronomy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Mercury",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Venus",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Mars",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "question": "Which is the name of the most mysterious element in the Universe?",
+      "difficulty": "Medium",
+      "category": "Astronomy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Dark matter",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Black Holes",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Dark energy",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "question": "What is the name of the strongest force in the Universe?",
+      "difficulty": "Medium",
+      "category": "Astronomy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Nuclear Force",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Gravity",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Electromagnetic Force",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "question": "What is the name of the strongest force in the Universe?",
+      "difficulty": "Medium",
+      "category": "Astronomy",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Nuclear Force",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Gravity",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Electromagnetic Force",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "question": "What is the name of the strongest force in the Universe?",
+      "difficulty": "Hard",
+      "category": "History",
+      "responses": [
+        {
+          "id": 1,
+          "response": "Nuclear Force",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "response": "Gravity",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "response": "Electromagnetic Force",
+          "isCorrect": false
+        }
+      ]
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ]
+>>>>>>> 3cc5a7a (BMI Project)
 }
