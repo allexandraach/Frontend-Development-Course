@@ -122,7 +122,7 @@ registerBtn.addEventListener("click", () => {
         isValid = true;
     }
 
-    if (newUsername.length == 0 || newEmail.length == 0 || newPassword == 0 ||
+    if (newUsername.length == 0 || newEmail.length == 0 || newPassword.length == 0 ||
         repeatedPassword == 0) {
         alert("Please fill in all the fields!");
     } else {
