@@ -20,3 +20,27 @@
     }
 
 }
+
+/* FEEDBACK FORM */
+
+ .feedback-form p {
+    font-size: 13px;
+ }
+
+form{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+
+.feedback-form > button{
+    font-size: medium;
+}
+
+
+h3, .feedback-form > p {
+    font-family: 'Open Sans', sans-serif;
+}

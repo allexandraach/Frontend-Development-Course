@@ -19,30 +19,24 @@ body {
 
 .theme-dark {
     --color-primary: #496925;
-    --color-secondary: #666666;
+    --color-secondary:  #577c0d;
     --color-accent: yellowgreen;
-    --font-color: #ffffff;
-    --background-color: #3f4e214d;
+    --font-color: #75933a;
+    --background-color: #6c8340;
+}
+
+.display {
+    display: inline-flex!important;
 }
 
 .no-display {
-    /* used !important because I do not want the display properties
-    on the parent element overide this property */
-    display: none!important;
+    display: none;
 }
 
 .btn-style {
     background-color: transparent;
     border: none;
 }
-
-
-body {
-    background-color: #eeeeee;
-}
-
-/* TRIED TO CHANGE THE BACKGROUND IMAGE OF THE LOGIN & REGISTER INTERFACES AND ALSO ADJUST HOW THE REGISTER
-CONTAINER IS BEING DISPLAYED BUT WITHOUT SUCCES; TO DO IN THE FUTURE */
 
 .gradient-custom-2 {
     /* fallback for old browsers */
@@ -95,7 +89,8 @@ CONTAINER IS BEING DISPLAYED BUT WITHOUT SUCCES; TO DO IN THE FUTURE */
 }
 
 #registerContainer2 {
-    width: -webkit-fill-available !important;
+    width: 100% !important;
+    overflow-y: hidden;
 }
 
 #grid-container {
@@ -104,7 +99,7 @@ CONTAINER IS BEING DISPLAYED BUT WITHOUT SUCCES; TO DO IN THE FUTURE */
         "head head head"
         "nav section section"
         "foot foot foot";
-    grid-template-rows: 7.6rem 34rem 9rem;
+    grid-template-rows: 7.4rem 32rem 9rem;
     grid-template-columns: 13rem 1fr;
 }
 
@@ -121,7 +116,8 @@ header {
     background-color: var(--color-primary);
 }
 
-h1 {
+h3 {
+    color: var(--font-color);
     margin-top: 1rem;
 }
 
@@ -161,6 +157,7 @@ h1 {
 }
 
 .icon-text {
+    color: var(--font-color);
     text-align: center;
     visibility: hidden;
     padding-top: 3px;
@@ -317,6 +314,56 @@ footer a:hover {
     padding: 3rem;
     margin-bottom: 4rem;
     text-decoration: none;
+}
+
+/* FEEDBACK FORM */
+
+h3{
+    margin-bottom: 3px;
+}
+
+textarea{
+    width: 450px;
+    height: 116px;
+}
+
+
+h3, .feedback-form > p{
+    color: white;
+    margin-top: 6px;
+    padding-left: 80px;
+    padding-right: 80px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+label {
+    color: white;
+}
+
+
+
+#feedbackFormContainer{
+    width: min-content;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to top, #75933a, #8BC34A);
+}
+
+.user-input{
+    width: 450px;
+    height: 35px;
+    margin-top: 0.5px;
+    margin-bottom: 4px;
+}
+
+.submit-btn{
+    width: 455px;
+    padding: 13px;
+    color: white;
+    background-color: #496925;
+    border: 2px solid #253e0a;
 }
 
 @media screen and (max-width: 962px) {
