@@ -19,18 +19,18 @@ body {
 
 .theme-dark {
     --color-primary: #496925;
-    --color-secondary:  #577c0d;
+    --color-secondary: #577c0d;
     --color-accent: yellowgreen;
     --font-color: #75933a;
     --background-color: #6c8340;
 }
 
 .display {
-    display: inline-flex!important;
+    display: inline-flex;
 }
 
 .no-display {
-    display: none;
+    display: none !important;
 }
 
 .btn-style {
@@ -318,47 +318,77 @@ footer a:hover {
 
 /* FEEDBACK FORM */
 
-h3{
+.lightbox {
+    display: none;
+}
+
+.lightbox:target {
+    position: absolute;
+    left: 33%;
+    bottom: 9%;
+    width: 500px;
+    display: flex;
+}
+
+.lightbox .close {
+    position: relative;
+    display: block;
+}
+
+.lightbox .close::after {
+    right: -1rem;
+    top: -1rem;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #344f15;
+    border-radius: 50%;
+    color: white;
+    content: "×";
+    cursor: pointer;
+}
+
+h3 {
     margin-bottom: 3px;
 }
 
-textarea{
+textarea {
     width: 450px;
     height: 116px;
 }
 
+.feedback-form {
+    width: 28em;
+}
 
-h3, .feedback-form > p{
+h3,
+.feedback-form > p {
     color: white;
     margin-top: 6px;
-    padding-left: 80px;
-    padding-right: 80px;
     line-height: 1.5;
     text-align: center;
 }
 
-label {
-    color: white;
-}
 
-
-
-#feedbackFormContainer{
-    width: min-content;
+.feedbackFormContainer {
     padding: 20px;
     flex-direction: column;
     align-items: center;
     background-image: linear-gradient(to top, #75933a, #8BC34A);
 }
 
-.user-input{
+.user-input {
     width: 450px;
     height: 35px;
     margin-top: 0.5px;
     margin-bottom: 4px;
 }
 
-.submit-btn{
+.submit-btn {
     width: 455px;
     padding: 13px;
     color: white;

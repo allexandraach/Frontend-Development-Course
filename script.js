@@ -12,27 +12,33 @@ function displayElem(toDisplay) {
     return;
 }
 
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-  }
-
-function getCookie(name) {
-    const cookieName = `${name}=`;
-    const cookieArray = document.cookie.split(';');
-    for (let i = 0; i < cookieArray.length; i++) {
-        let cookie = cookieArray[i];
-        while (cookie.charAt(0) === ' ') {
-            cookie = cookie.substring(1);
-        }
-        if (cookie.indexOf(cookieName) === 0) {
-            return decodeURIComponent(cookie.substring(cookieName.length, cookie.length));
-        }
-    }
-    return null;
+function redirect(filename) {
+    location.href = filename +".html";
 }
+
+// doesn't work; will use Local Storage for now
+
+// function setCookie(cname, cvalue, exdays) {
+//     const d = new Date();
+//     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+//     let expires = "expires=" + d.toUTCString();
+//     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+// }
+
+// function getCookie(name) {
+//     const cookieName = `${name}=`;
+//     const cookieArray = document.cookie.split(';');
+//     for (let i = 0; i < cookieArray.length; i++) {
+//         let cookie = cookieArray[i];
+//         while (cookie.charAt(0) === ' ') {
+//             cookie = cookie.substring(1);
+//         }
+//         if (cookie.indexOf(cookieName) === 0) {
+//             return decodeURIComponent(cookie.substring(cookieName.length, cookie.length));
+//         }
+//     }
+//     return null;
+// }
 
 // LOGIN PAGE
 
@@ -52,9 +58,9 @@ class User {
 
     login() {
         fetch(`${apiUsers}?username=${this.username}`)
-        .then(response => { return response.json() })
-        .then(data => { checkData(data) })
-        // .catch(error => console.log('Error: ' + error));
+            .then(response => { return response.json() })
+            .then(data => { checkData(data)})
+            .catch(error => console.log('Error: ' + error))
     }
 
 }
@@ -70,7 +76,7 @@ class LoggedUser extends User {
     }
 
     changePassword() {
-        
+
     }
 
 
@@ -88,7 +94,7 @@ class LoggedUser extends User {
             .catch(error => console.log('Error: ' + error))
     }
 
-     // getEmail() {
+    // getEmail() {
     //     return this.#email;
     // }
 
@@ -112,7 +118,7 @@ class LoggedUser extends User {
     //     return this.#password;
     // }
 
-// }
+    // }
 }
 
 
@@ -131,35 +137,39 @@ function checkData(serverData) {
         alert("Login successfully!")
         currentUser = new LoggedUser(currentUser.username, currentUser.password);
         console.log(currentUser);
-        // doesn't work
-        setCookie('currentUser', JSON.stringify(currentUser), 7);
-        debugger;
-        // location.href = "dashboard.html"
+        localStorage.setItem("username", currentUser.username);
+        localStorage.setItem("password", currentUser.password);
+        redirect("dashboard");
+
     } else {
         alert("Login failed!")
     }
 }
 
- if (loginBtn) { loginBtn.addEventListener("click", () => {
+if (loginBtn) {
+    loginBtn.addEventListener("click", () => {
 
-    const usernameFromUser = document.getElementById("form2Example11").value;
-    const passwordFromUser = document.getElementById("form2Example22").value;
+        const usernameFromUser = document.getElementById("form2Example11").value;
+        const passwordFromUser = document.getElementById("form2Example22").value;
 
-    currentUser = new User (usernameFromUser, passwordFromUser);
+        currentUser = new User(usernameFromUser, passwordFromUser);
 
-    currentUser.login();
+        currentUser.login();
 
-})};
+    })
+};
 
 // REGISTER ACCOUNT
 
 const createAccountBtn = document.getElementsByClassName("btn btn-outline-danger")[0];
 
-if (createAccountBtn) {createAccountBtn.addEventListener("click", () => {
-    hideElem(loginForm);
-    displayElem(registerForm);
+if (createAccountBtn) {
+    createAccountBtn.addEventListener("click", () => {
+        hideElem(loginForm);
+        displayElem(registerForm);
 
-})};
+    })
+};
 
 
 const registerForm = document.getElementById("registerContainer");
@@ -172,70 +182,83 @@ let newEmail;
 let newPassword;
 let repeatedPassword;
 
-if (registerBtn) {registerBtn.addEventListener("click", () => {
+if (registerBtn) {
+    registerBtn.addEventListener("click", () => {
 
-    newUsername = document.getElementById("form3Example1cg").value;
-    newEmail = document.getElementById("form3Example3cg").value;
-    newPassword = document.getElementById("form3Example4cg").value;
-    repeatedPassword = document.getElementById("form3Example4cdg").value;
-    let isValid;
+        newUsername = document.getElementById("form3Example1cg").value;
+        newEmail = document.getElementById("form3Example3cg").value;
+        newPassword = document.getElementById("form3Example4cg").value;
+        repeatedPassword = document.getElementById("form3Example4cdg").value;
+        let isValid;
 
-    if (newPassword !== repeatedPassword) {
-        alert("Inserted passwords do not match!");
-    } else {
-        isValid = true;
+        if (newPassword !== repeatedPassword) {
+            alert("Inserted passwords do not match!");
+        } else {
+            isValid = true;
+        }
+
+        if (!termsOfServiceBtn.checked) {
+            alert("To create an account, you must agree to the Terms of Service.");
+        } else {
+            isValid = true;
+        }
+
+        if (newUsername.length == 0 || newEmail.length == 0 || newPassword.length == 0 ||
+            repeatedPassword == 0) {
+            alert("Please fill in all the fields!");
+        } else {
+            isValid = true;
+        }
+
+        // future improvements: verify that username and email are not taken
+
+        if (isValid) {
+            newUser = new User(newUsername, newPassword, newEmail);
+            console.log(newUser);
+
+            fetch(`${apiUsers}`, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newUser)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    alert("Account created successfully!");
+                    redirect("dashboard");
+                }
+                )
+                .catch(error => console.log('Error: ' + error))
+
+
+        }
+
     }
-
-    if (!termsOfServiceBtn.checked) {
-        alert("To created an account, you must agree to the Terms of Service.");
-    } else {
-        isValid = true;
-    }
-
-    if (newUsername.length == 0 || newEmail.length == 0 || newPassword.length == 0 ||
-        repeatedPassword == 0) {
-        alert("Please fill in all the fields!");
-    } else {
-        isValid = true;
-    }
-
-    // future improvements: verify that username and email are not taken
-
-    if (isValid) {
-        newUser = new User(newUsername, newPassword, newEmail);
-        console.log(newUser);
-
-        fetch(`${apiUsers}`, {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(newUser)
-        })
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.log('Error: ' + error))
-
-        alert("Account created successfully!");
-        location.href = "../dashboard/dashboard.html";
-
-    }
-
-}
-)};
+    )
+};
 
 // BACK TO LOGIN PAGE
 
 const loginHereBtn = document.getElementById("loginHereBtn");
 
-if (loginHereBtn) {loginHereBtn.addEventListener("click", () => {
-    hideElem(registerForm);
-    displayElem(loginForm);
-}
-)};
+if (loginHereBtn) {
+    loginHereBtn.addEventListener("click", () => {
+        hideElem(registerForm);
+        displayElem(loginForm);
+    }
+    )
+};
 
 
 // DASHBOARD PAGE
+
+// DISPLAY USERNAME ON DASHBOARD PAGE TO WELCOME USER
+
+const displayUsername = document.getElementById("displayUsername");
+displayUsername.textContent = localStorage.getItem("username");
+
 
 
 function toggle(dropdownNo) {
@@ -265,44 +288,31 @@ function toggleTheme() {
 
 }
 
-//FEEDBACK FUNCTIONALITY
-
-const displayFeedbackBtn = document.getElementById('feedbackIcon');
-const feedbackFormContainer = document.getElementById('feedbackFormContainer');
-
-
-if (displayFeedbackBtn) {displayFeedbackBtn.addEventListener("click", () => {
-
-    feedbackFormContainer.classList.toggle("display");
-    playBtn.classList.toggle("no-display");
-
-}
-)};
-
-
-// DELETE ACCOUNT - doesn't work because the error 'DELETE http://localhost:3000/users?username=alexaach 404
-//  (Not Found) occurs'; TO SOLVE THIS PROBLEM IN THE FUTURE
+// DELETE ACCOUNT
 
 const deleteAccountBtn = document.getElementById('deleteAccBtn');
 
-if (deleteAccountBtn) {deleteAccountBtn.addEventListener("click", () => {
+if (deleteAccountBtn) {
+    deleteAccountBtn.addEventListener("click", () => {
 
-    if (confirm("Are you sure you want to delete your account?") == true) {
-        currentUser.deleteAccount();
-    } else {
-        alert("Your account won't be deleted.")
+        if (confirm("Are you sure you want to delete your account?") == true) {
+            currentUser = new LoggedUser (localStorage.getItem("username"), localStorage.getItem("password"));
+            currentUser.deleteAccount();
+        } else {
+            alert("Your account won't be deleted.")
+        }
+
     }
-
-}
-)};
+    )
+};
 
 // LOGOUT
 
 const logOutBtn = document.getElementById('logOutBtn');
 
- if (logOutBtn) {logOutBtn.addEventListener("click", () =>
-    // NOT IDEAL; TO BE IMPROVED IN THE FUTURE
-    location.href = "home.html"
+if (logOutBtn) {
+    logOutBtn.addEventListener("click", () =>
+    redirect("home")
 )};
 
 
@@ -314,14 +324,16 @@ const playBtn = document.getElementById("playBtn");
 const userChoicesContainer = document.getElementById("userChoicesContainer");
 const findResultBtnContainer = document.getElementById("findResultBtnContainer");
 
-if (playBtn) {playBtn.addEventListener("click", () => {
+if (playBtn) {
+    playBtn.addEventListener("click", () => {
 
-    displayElem(userChoicesContainer);
-    displayElem(startQuizBtnContainer);
-    hideElem(playBtnContainer);
+        displayElem(userChoicesContainer);
+        displayElem(startQuizBtnContainer);
+        hideElem(playBtnContainer);
 
 
-})};
+    })
+};
 
 // START QUIZ
 
@@ -344,8 +356,6 @@ function startCountdown(seconds) {
         }
     }, 1000);
 
-    // return countdown
-
 }
 
 
@@ -358,10 +368,9 @@ let questionsContainer = document.getElementById('questionsContainer');
 
 function displayQuestion(data, currentIndex = 0) {
 
-    // timeOutDuration will be used to change the duration of the timeour dynamically
-    //  based on the categoryselected by the user
+    // timeOutDuration will be used to change the duration of the timeout dynamically
+    //  based on the category selected by the user
     let timeOutDuration;
-
 
     if (difficultyFromUser === "Easy") {
         startCountdown(13);
@@ -456,69 +465,61 @@ function displayQuestion(data, currentIndex = 0) {
 
 const findResultBtn = document.getElementById("findResultBtn");
 
- if (findResultBtn) {findResultBtn.addEventListener("click", () => {
+if (findResultBtn) {
+    findResultBtn.addEventListener("click", () => {
 
-    // TO BE USED IN THE FUTURE TO IMPLEMENT THE FUNCTIONALITY TO VIEW PREVIOUS
-    // QUIZZES 
-    const dateOfQuiz = new Date();
-    let timeOfQuiz = dateOfQuiz.getTime();
-    console.log(dateOfQuiz, timeOfQuiz);
+        // TO BE USED IN THE FUTURE TO IMPLEMENT THE FUNCTIONALITY TO VIEW PREVIOUS
+        // QUIZZES 
+        const dateOfQuiz = new Date();
+        let timeOfQuiz = dateOfQuiz.getTime();
+        console.log(dateOfQuiz, timeOfQuiz);
 
-    // FIND USER'S SCORE
+        // FIND USER'S SCORE
 
-    const userScoreContainer = document.getElementById("userScoreContainer");
-    const showUserScore = document.getElementById("showUserScore");
+        const userScoreContainer = document.getElementById("userScoreContainer");
+        const showUserScore = document.getElementById("showUserScore");
 
-    //filters only the string responses which have the isCorrect property set to
-    // true and therefore are the correct answers to the questions
+        //filters only the string responses which have the isCorrect property set to
+        // true and therefore are the correct answers to the questions
 
-    const correctResponses = quizfromDatabase.map(obj => obj.responses.find(resp => resp.isCorrect).response);
+        const correctResponses = quizFromDatabase.map(obj => obj.responses.find(resp => resp.isCorrect).response);
 
-    console.log('correctAnswers:', correctResponses);
+        const userCorrectAnswers = responsesFromUser.filter(ans => correctResponses.includes(ans));
 
-    const userCorrectAnswers = responsesFromUser.filter(ans => correctResponses.includes(ans));
+        const userScore = userCorrectAnswers.length + 1;
 
-    console.log('matchingAnswers:', userCorrectAnswers);
+        displayElem(userScoreContainer);
+        showUserScore.innerText = userScore;
+        hideElem(findResultBtnContainer);
 
-    const userScore = userCorrectAnswers.length + 1;
+        // NOT WORKING; TO DO
 
-    console.log('Your score is:', userScore);
+        playBtn.textContent = "Start new game";
 
-    displayElem(userScoreContainer);
-    showUserScore.innerText = userScore;
-    hideElem(findResultBtnContainer);
+    })};
 
-    // NOT WORKING; TO DO
+    let categoryFromUser = document.getElementById('categoryFromUser')
+    let difficultyFromUser = document.getElementById('difficultyFromUser');
+    const quizFromDatabase = [];
 
-    playBtn.textContent = "Start new game";
-
-}
-
-)
-
-let categoryFromUser = document.getElementById('categoryFromUser')
-let difficultyFromUser = document.getElementById('difficultyFromUser');
-const quizfromDatabase = [];
-
-const startQuizBtn = document.getElementById("startQuizBtn");
+    const startQuizBtn = document.getElementById("startQuizBtn");
 
 
-startQuizBtn.addEventListener("click", () => {
+    if (startQuizBtn) {startQuizBtn.addEventListener("click", () => {
 
-    hideElem(userChoicesContainer);
-    hideElem(startQuizBtn);
+        hideElem(userChoicesContainer);
+        hideElem(startQuizBtn);
 
-    categoryFromUser = categoryFromUser.value;
-    difficultyFromUser = difficultyFromUser.value;
+        categoryFromUser = categoryFromUser.value;
+        difficultyFromUser = difficultyFromUser.value;
 
-    fetch(`${apiQuestionsEN}?difficulty=${difficultyFromUser}&category=${categoryFromUser}`)
-        .then(response => response.json())
-        .then(json => {
-            console.log(json);
-            quizfromDatabase.push(...json);
-            displayQuestion(json);
+        fetch(`${apiQuestionsEN}?difficulty=${difficultyFromUser}&category=${categoryFromUser}`)
+            .then(response => response.json())
+            .then(json => {
+                quizFromDatabase.push(...json);
+                displayQuestion(json);
 
-        })
+            });
 
-})};
+    })};
 
