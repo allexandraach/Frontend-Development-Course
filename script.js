@@ -12,8 +12,8 @@ function displayElem(toDisplay) {
     return;
 }
 
-function redirect(filename) {
-    location.href = filename +".html";
+function redirectTo(filename) {
+    location.href = filename + ".html";
 }
 
 // doesn't work; will use Local Storage for now
@@ -42,6 +42,8 @@ function redirect(filename) {
 
 // LOGIN PAGE
 
+// FUTURE IMPROVEMENT: MAKE THE PROPERTIES PRIVATE
+
 class User {
     username;
     password;
@@ -56,10 +58,23 @@ class User {
     register() {
     }
 
+    authenticateUser(serverData) {
+        if (serverData[0].username === this.username && serverData[0].password === this.password) {
+            alert("Login successfully!")
+            localStorage.setItem("username", this.username);
+            localStorage.setItem("password", this.password);
+            redirectTo("dashboard");
+
+        } else {
+            alert("Login failed!");
+        }
+
+    }
+
     login() {
         fetch(`${apiUsers}?username=${this.username}`)
             .then(response => { return response.json() })
-            .then(data => { checkData(data)})
+            .then(data => { this.authenticateUser(data) })
             .catch(error => console.log('Error: ' + error))
     }
 
@@ -82,15 +97,20 @@ class LoggedUser extends User {
 
     deleteAccount() {
 
-        fetch(`${apiUsers}?username=${currentUser.username}`, {
-            method: "DELETE",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(this.user)
+        // doesn't work; the URL works for GET request but not for a DELETE request, the error 404 not found is fired
+        // same behaviour in Postman
+
+        fetch(`${apiUsers}?username=${this.username}`, {
+            method: "DELETE"
         })
-            .then(response => response.json())
-            .then(data => console.log(data))
+            .then(response => {
+                if (response.ok) {
+                    alert("Your account has been deleted. You will be redirect to the login page");
+                    redirectTo("home");
+                } else {
+                    alert("An error occured and we couldn't delete your account. Please try again later.");
+                }
+            })
             .catch(error => console.log('Error: ' + error))
     }
 
@@ -127,24 +147,7 @@ const loginForm = document.getElementById("loginFormContainer");
 
 // LOGIN TO ACCOUNT
 
-// FUTURE IMPROVEMENT: FORGOT YOUR PASSWORD FUNCTIONALITY 
-
 let currentUser;
-
-function checkData(serverData) {
-
-    if (serverData[0].username === currentUser.username && serverData[0].password === currentUser.password) {
-        alert("Login successfully!")
-        currentUser = new LoggedUser(currentUser.username, currentUser.password);
-        console.log(currentUser);
-        localStorage.setItem("username", currentUser.username);
-        localStorage.setItem("password", currentUser.password);
-        redirect("dashboard");
-
-    } else {
-        alert("Login failed!")
-    }
-}
 
 if (loginBtn) {
     loginBtn.addEventListener("click", () => {
@@ -227,7 +230,7 @@ if (registerBtn) {
                 .then(data => {
                     console.log(data);
                     alert("Account created successfully!");
-                    redirect("dashboard");
+                    redirectTo("dashboard");
                 }
                 )
                 .catch(error => console.log('Error: ' + error))
@@ -254,10 +257,16 @@ if (loginHereBtn) {
 
 // DASHBOARD PAGE
 
-// DISPLAY USERNAME ON DASHBOARD PAGE TO WELCOME USER
+// AFTER THE LOGIN
 
 const displayUsername = document.getElementById("displayUsername");
-displayUsername.textContent = localStorage.getItem("username");
+
+if (localStorage.length) {
+    currentUser = new LoggedUser(localStorage.getItem("username"), localStorage.getItem("password"));
+    console.log(currentUser);
+    // DISPLAY USERNAME ON DASHBOARD PAGE TO WELCOME USER
+    displayUsername.textContent = currentUser.username;
+}
 
 
 
@@ -267,6 +276,7 @@ function toggle(dropdownNo) {
 
     dropdownContainer.classList.toggle("no-display");
     dropdownContainer.classList.toggle("active-dropdown");
+    
     selectedButton.classList.toggle("bold");
 
 }
@@ -286,7 +296,7 @@ function toggleTheme() {
         setTheme('theme-dark');
     }
 
-}
+};
 
 // DELETE ACCOUNT
 
@@ -296,7 +306,6 @@ if (deleteAccountBtn) {
     deleteAccountBtn.addEventListener("click", () => {
 
         if (confirm("Are you sure you want to delete your account?") == true) {
-            currentUser = new LoggedUser (localStorage.getItem("username"), localStorage.getItem("password"));
             currentUser.deleteAccount();
         } else {
             alert("Your account won't be deleted.")
@@ -312,8 +321,9 @@ const logOutBtn = document.getElementById('logOutBtn');
 
 if (logOutBtn) {
     logOutBtn.addEventListener("click", () =>
-    redirect("home")
-)};
+        redirectTo("home")
+    )
+};
 
 
 // I WANT TO PLAY
@@ -496,16 +506,18 @@ if (findResultBtn) {
 
         playBtn.textContent = "Start new game";
 
-    })};
+    })
+};
 
-    let categoryFromUser = document.getElementById('categoryFromUser')
-    let difficultyFromUser = document.getElementById('difficultyFromUser');
-    const quizFromDatabase = [];
+let categoryFromUser = document.getElementById('categoryFromUser')
+let difficultyFromUser = document.getElementById('difficultyFromUser');
+const quizFromDatabase = [];
 
-    const startQuizBtn = document.getElementById("startQuizBtn");
+const startQuizBtn = document.getElementById("startQuizBtn");
 
 
-    if (startQuizBtn) {startQuizBtn.addEventListener("click", () => {
+if (startQuizBtn) {
+    startQuizBtn.addEventListener("click", () => {
 
         hideElem(userChoicesContainer);
         hideElem(startQuizBtn);
@@ -521,5 +533,6 @@ if (findResultBtn) {
 
             });
 
-    })};
+    })
+};
 

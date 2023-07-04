@@ -10,19 +10,23 @@ body {
 .theme-light {
     --color-primary: yellowgreen;
     --color-secondary: floralwhite;
-    --color-accent: yellowgreen;
+    --color-accent: #496925;
     --font-color: #000000;
     --background-color: #a2d0444d;
-    --background-gradient: 117deg, rgba(123, 216, 96, 1) 39.2%, rgba(255, 255, 255, 1) 156.2%;
+    --background-brightness: 140%;
+    --gradient-primary: to right, #ADD100 0%, #7B920A 51%, #ADD100 100%;
+    --gradient-secondary: 117deg, rgba(123, 216, 96, 1) 39.2%, rgba(255, 255, 255, 1) 156.2%;
 
 }
 
 .theme-dark {
     --color-primary: #496925;
-    --color-secondary: #577c0d;
+    --color-secondary: #55832b;
     --color-accent: yellowgreen;
-    --font-color: #75933a;
-    --background-color: #6c8340;
+    --font-color: #cade9f;
+    --background-color: #618343;
+    --background-brightness: 80%;
+    --gradient-primary: to right, #384011 0%, #718028 51%, #384011 100%;
 }
 
 .display {
@@ -113,7 +117,11 @@ header {
     height: fit-content;
     display: flex;
     justify-content: space-around;
-    background-color: var(--color-primary);
+    background-image: url("https://i.ibb.co/NYY8V2X/dbskx1k-5550fa3d-234b-44ad-851c-2607e60fad53.png");
+    filter: brightness(var(--background-brightness));
+    background-position: center;
+    background-repeat: repeat;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; */
 }
 
 h3 {
@@ -148,6 +156,7 @@ h3 {
 
 .icon-item:hover {
     animation: swing 1s linear none infinite;
+    cursor: pointer;
 
 }
 
@@ -177,7 +186,18 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--color-secondary);
+
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
+
+#sidenavBackgroundImg {
+    background-image: url("https://svgshare.com/i/uwj.svg");
+    background-size: 97%;
+    background-color: var(--color-secondary);
+    background-blend-mode: soft-light;
+}
+
+
 
 .btn-style {
     padding-left: 14px;
@@ -185,7 +205,8 @@ nav {
 }
 
 button:hover {
-    color: var(--color-accent);
+    color: yellowgreen;
+    cursor: pointer;
 }
 
 .bold {
@@ -234,7 +255,7 @@ section {
 #startQuizBtn,
 #findResultBtn {
 
-    background-image: linear-gradient(to right, #ADD100 0%, #7B920A 51%, #ADD100 100%);
+    background-image: linear-gradient(var(--gradient-primary));
     margin: 10px;
     padding: 15px 45px;
     text-align: center;
@@ -242,10 +263,10 @@ section {
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
-    box-shadow: 0 0 20px #eee;
     border: transparent;
     border-radius: 10px;
     display: block;
+    box-shadow: 0 7px #54630b;
 
 }
 
@@ -256,6 +277,13 @@ section {
     /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
+}
+
+#playBtn:active,
+#startQuizBtn:active,
+#findResultBtn:active {
+    box-shadow: 0 5px #54630b;
+    transform: translateY(4px);
 }
 
 #beforeQuizContainer {
@@ -271,7 +299,7 @@ section {
 
 #questionsContainer {
     width: 38rem;
-    background-image: linear-gradient(var(--background-gradient));
+    background-image: linear-gradient(var(--gradient-secondary));
 
 }
 
@@ -299,6 +327,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
 footer a {
@@ -306,7 +335,7 @@ footer a {
 }
 
 footer a:hover {
-    color: gray;
+    color: var(--color-accent);
 }
 
 
@@ -318,11 +347,25 @@ footer a:hover {
 
 /* FEEDBACK FORM */
 
-.lightbox {
+.popup-window {
     display: none;
 }
 
-.lightbox:target {
+.popup-window:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 999;
+
+    /* fade in */
+    transition: opacity 0.2s ease-in-out;
+}
+
+.popup-window:target {
     position: absolute;
     left: 33%;
     bottom: 9%;
@@ -330,12 +373,12 @@ footer a:hover {
     display: flex;
 }
 
-.lightbox .close {
+.popup-window .close {
     position: relative;
     display: block;
 }
 
-.lightbox .close::after {
+.popup-window .close::after {
     right: -1rem;
     top: -1rem;
     width: 2rem;
@@ -366,7 +409,7 @@ textarea {
 }
 
 h3,
-.feedback-form > p {
+.feedback-form>p {
     color: white;
     margin-top: 6px;
     line-height: 1.5;
@@ -430,6 +473,7 @@ h3,
 
 
     h1 {
+        margin-top: 13px;
         display: inline-flex;
     }
 
@@ -461,10 +505,6 @@ h3,
         margin-left: 0;
         margin-right: 0;
         padding: 0;
-    }
-
-    .active-dropdown {
-        background-color: var(--color-secondary);
     }
 
     button:hover {

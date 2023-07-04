@@ -27,14 +27,15 @@
                     <div class="icon-text"> Change language</div>
                 </div>
                 <div class="icon-item">
-                    <a href="#feedbackForm"><img src="https://svgshare.com/i/sSJ.svg" id="feedbackIcon" alt="feedback-icon" height="30em"></a>
+                    <a href="#feedbackForm"><img src="https://svgshare.com/i/sSJ.svg" id="feedbackIcon"
+                            alt="feedback-icon" height="30em"></a>
                     <div class="icon-text">Send feedback</div>
                 </div>
             </div>
         </header>
 
-        <nav id="sidenav-container">
-            <div>
+        <nav id="sidenavBackgroundImg">
+            <div id="sidenav-container">
                 <div>
                     <div class="dropdown">
                         <button onclick="toggle(0)" class="btn-style dropdown-btn">My Quizzes
@@ -60,10 +61,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                <br>
+                <br>
 
-            <div>
-                <button class="btn-style" id="logOutBtn">Log Out</button>
+                <div>
+                    <button class="btn-style" id="logOutBtn">Log Out</button>
+                </div>
             </div>
         </nav>
 
@@ -117,7 +120,7 @@
                 <button id="findResultBtn">Find my result!</button>
             </div>
 
-            <div class="lightbox feedbackFormContainer" id="feedbackForm">
+            <div class="popup-window feedbackFormContainer" id="feedbackForm">
                 <div class="feedback-form">
                     <!-- close button -->
                     <a href="#" class="close"></a>
