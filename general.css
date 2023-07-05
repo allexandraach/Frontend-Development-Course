@@ -7,26 +7,42 @@ body {
     overflow: hidden;
 }
 
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+}
+
+
 .theme-light {
     --color-primary: yellowgreen;
     --color-secondary: floralwhite;
-    --color-accent: #496925;
-    --font-color: #000000;
+    --color-accent: yellowgreen;
+    --font-color: black;
     --background-color: #a2d0444d;
     --background-brightness: 140%;
     --gradient-primary: to right, #ADD100 0%, #7B920A 51%, #ADD100 100%;
-    --gradient-secondary: 117deg, rgba(123, 216, 96, 1) 39.2%, rgba(255, 255, 255, 1) 156.2%;
+    --gradient-secondary: 117deg, rgba(123, 216, 96) 39.2%, rgba(255, 255, 255) 156.2%;
 
 }
 
 .theme-dark {
     --color-primary: #496925;
     --color-secondary: #55832b;
-    --color-accent: yellowgreen;
+    --color-accent: white;
     --font-color: #cade9f;
-    --background-color: #618343;
+    --background-color: #6d944b;
     --background-brightness: 80%;
-    --gradient-primary: to right, #384011 0%, #718028 51%, #384011 100%;
+    --gradient-primary: to right, #334011 0%, #718028 51%, #384011 100%;
+    --gradient-secondary: 117deg, rgba(65, 136, 0) 39.2%, rgba(133, 221, 53) 156.2%;
+
 }
 
 .display {
@@ -35,11 +51,6 @@ body {
 
 .no-display {
     display: none !important;
-}
-
-.btn-style {
-    background-color: transparent;
-    border: none;
 }
 
 .gradient-custom-2 {
@@ -55,19 +66,6 @@ body {
 
 .btn {
     width: 24.5em;
-}
-
-@media (min-width: 768px) {
-    .gradient-form {
-        height: 100vh !important;
-    }
-}
-
-@media (min-width: 769px) {
-    .gradient-custom-2 {
-        border-top-right-radius: .3rem;
-        border-bottom-right-radius: .3rem;
-    }
 }
 
 .gradient-custom-3 {
@@ -97,11 +95,11 @@ body {
     overflow-y: hidden;
 }
 
-#grid-container {
+#gridContainer {
     display: grid;
     grid-template-areas:
         "head head head"
-        "nav section section"
+        "nav main main"
         "foot foot foot";
     grid-template-rows: 7.4rem 32rem 9rem;
     grid-template-columns: 13rem 1fr;
@@ -124,52 +122,36 @@ header {
     /* box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; */
 }
 
-h3 {
-    color: var(--font-color);
-    margin-top: 1rem;
-}
-
-#icon-item-container {
+#iconItemContainer {
     display: flex;
 }
 
-@keyframes swing {
-    0% {
-        transform: rotate(10deg);
-
-    }
-
-    50% {
-        transform: rotate(-5deg);
-    }
-
-    100% {
-        transform: rotate(10deg);
-
-    }
-}
-
 .icon-item {
-    margin: 1rem 2rem;
+    margin: 2rem 4.5rem 0.3rem 2rem;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .icon-item:hover {
-    animation: swing 1s linear none infinite;
     cursor: pointer;
 
 }
 
-.icon-item:hover div {
+.icon-item:hover + div {
     visibility: visible;
 
 }
 
+.icon-item:active {
+    transform: rotateY(180deg);
+}
+
 .icon-text {
-    color: var(--font-color);
-    text-align: center;
+    color: black;
+    /* text-align: center; */
     visibility: hidden;
     padding-top: 3px;
+    margin-left: -2px;
 }
 
 nav {
@@ -178,7 +160,7 @@ nav {
 
 }
 
-#sidenav-container {
+#sidenavContainer {
     height: auto;
     padding-top: 40px;
     padding-left: 20px;
@@ -186,8 +168,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--color-secondary);
-
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    
 }
 
 #sidenavBackgroundImg {
@@ -195,18 +176,27 @@ nav {
     background-size: 97%;
     background-color: var(--color-secondary);
     background-blend-mode: soft-light;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
-
-
-.btn-style {
+.nav-btn-style {
     padding-left: 14px;
     padding-bottom: 14px;
+    background-color: transparent;
+    border: none;
+    color: var(--font-color);
+    text-align: inherit;
 }
 
-button:hover {
-    color: yellowgreen;
+.nav-btn-style:hover {
+    color: var(--color-accent);
     cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    margin-left: 1rem;
 }
 
 .bold {
@@ -215,14 +205,11 @@ button:hover {
 
 .active-dropdown {
     background-color: var(--color-primary);
+    opacity: 85%;
 }
 
 .dropdown-container>p:hover {
     background-color: #81aa53;
-}
-
-#deleteAccBtn {
-    color: red;
 }
 
 .caret-down-icon {
@@ -232,9 +219,9 @@ button:hover {
     padding-left: 34px;
 }
 
-section {
+main {
     background-color: var(--background-color);
-    grid-area: section;
+    grid-area: main;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -297,28 +284,58 @@ section {
     margin-top: 4rem;
 }
 
+select {
+    padding: 0.4em;
+    border-color: #F1F8E9;
+    border-radius: 60px;
+}
+
 #questionsContainer {
+    height: max-content;
     width: 38rem;
     background-image: linear-gradient(var(--gradient-secondary));
 
 }
 
 #questionsContainer p {
+    color: var(--font-color);
     padding: 1rem;
     margin: 1rem;
 
 }
 
-#countdown {
-    display: flex;
-    justify-content: right;
-
+ #quizQuestion {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    animation: 
+    typing 2s steps(40, end)
 }
 
+/* TO BE IMPROVED IN THE FUTURE AS DIRECTION IS WRONG */
+#quizQuestion + p {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: 
+    typing 3s steps(40, end)
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+
+label {
+    color: var(--font-color);
+}
 
 input[type="radio"] {
     padding: 4px;
     margin: 8px;
+    accent-color: #586c31;
 }
 
 footer {
@@ -395,10 +412,6 @@ footer a:hover {
     cursor: pointer;
 }
 
-h3 {
-    margin-bottom: 3px;
-}
-
 textarea {
     width: 450px;
     height: 116px;
@@ -408,7 +421,6 @@ textarea {
     width: 28em;
 }
 
-h3,
 .feedback-form>p {
     color: white;
     margin-top: 6px;
@@ -417,7 +429,7 @@ h3,
 }
 
 
-.feedbackFormContainer {
+.feedback-form-container {
     padding: 20px;
     flex-direction: column;
     align-items: center;
@@ -445,6 +457,13 @@ h3,
 
 }
 
+@media screen and (max-width: 720px),
+(orientation: landscape) {
+
+    /* TO DO IN THE FUTURE: MAKE THE PROJECT INTERFACE FULLY RESPONSIVE ON LANDSCAPE ORIENTED MOBILE DEVICES */
+
+}
+
 @media screen and (max-width: 720px) {
 
     body {
@@ -452,33 +471,32 @@ h3,
     }
 
 
-    #grid-container {
+    #gridContainer {
         height: fit-content;
         display: grid;
         grid-template-areas:
             "head nav nav"
-            "section section section"
-            "section section section"
+            "main main main"
+            "main main main"
             "foot foot foot";
         grid-template-rows: 1fr 4.6fr 1fr;
         grid-template-columns: 1fr;
     }
 
     #headerNav,
-    section {
+    main {
         height: auto;
         display: flex;
         flex-direction: column;
     }
 
-
+/* for some reason or another the browser doesn't recognize & apply this */
     h1 {
-        margin-top: 13px;
-        display: inline-flex;
+        padding-top: 1rem;
     }
 
 
-    #sidenav-container {
+    #sidenavContainer {
         height: auto;
         display: flex;
         flex-direction: column;
@@ -490,7 +508,7 @@ h3,
         height: 30px;
     }
 
-    section {
+    main {
         flex: auto;
     }
 
@@ -507,9 +525,6 @@ h3,
         padding: 0;
     }
 
-    button:hover {
-        color: var(--font-color);
-    }
 
     .link-item {
         margin-bottom: 1rem;

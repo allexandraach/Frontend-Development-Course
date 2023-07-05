@@ -351,14 +351,13 @@ let countdown;
 
 function startCountdown(seconds) {
     let countdownValue = seconds + 1;
-    // WORKS, BUT WILL HAVE TO MODIFY OTHER THINGS TO OBTAIN THE INTENDED BEHAVIOUR AND ASPECT;
-    //  TO DO IN THE FUTURE
-    // document.getElementById("countdownDuration").innerHTML = seconds;
+    // display the seconds available to answer the question
+    document.getElementById("countdownDuration").textContent = seconds;
 
     countdown = setInterval(() => {
         countdownValue--;
 
-        // Update the countdown display
+        // Update the no. of seconds as they pass 
         document.getElementById("countdown").innerHTML = countdownValue;
 
         if (countdownValue === 1) {
@@ -370,7 +369,6 @@ function startCountdown(seconds) {
 
 
 let responsesFromUser = [];
-let questionsContainer = document.getElementById('questionsContainer');
 
 // THIS PART NEEDS TO BE BETTER ORGANIZED IN THE FUTURE; HARD TO READ CODE; TO MOVE SEVERAL FUNCTIONALITIES FROM 
 // displayQuestion FUNCTION TO OTHER FUNCTIONS WHICH WILL BE CALLED INSIDE displayQuestion function TO MAKE
@@ -514,6 +512,7 @@ let difficultyFromUser = document.getElementById('difficultyFromUser');
 const quizFromDatabase = [];
 
 const startQuizBtn = document.getElementById("startQuizBtn");
+const questionsContainer = document.getElementById('questionsContainer');
 
 
 if (startQuizBtn) {
@@ -521,6 +520,7 @@ if (startQuizBtn) {
 
         hideElem(userChoicesContainer);
         hideElem(startQuizBtn);
+        displayElem(questionsContainer);
 
         categoryFromUser = categoryFromUser.value;
         difficultyFromUser = difficultyFromUser.value;

@@ -11,53 +11,56 @@
 </head>
 
 <body>
-    <div id="grid-container">
+    <div id="gridContainer">
 
         <header id="headerNav">
 
             <h1>Welcome, <span id="displayUsername"></span>!</h1>
 
-            <div id="icon-item-container">
-                <div class="icon-item">
-                    <img src="https://svgshare.com/i/sSw.svg" onclick="toggleTheme()" alt="theme-icon" height="30em">
+            <div id="iconItemContainer">
+                <div>
+                    <img class="icon-item" src="https://svgshare.com/i/sSw.svg" onclick="toggleTheme()" alt="theme-icon"
+                        height="30em">
                     <div class="icon-text">Change theme</div>
                 </div>
-                <div class="icon-item">
-                    <img src="https://svgshare.com/i/sRL.svg" alt="language-icon" height="30em">
+
+                <div>
+                    <img class="icon-item" src="https://svgshare.com/i/sRL.svg" alt="language-icon" height="30em">
                     <div class="icon-text"> Change language</div>
                 </div>
-                <div class="icon-item">
-                    <a href="#feedbackForm"><img src="https://svgshare.com/i/sSJ.svg" id="feedbackIcon"
-                            alt="feedback-icon" height="30em"></a>
+
+                <div>
+                    <img class="icon-item" src="https://svgshare.com/i/sSJ.svg" id="feedbackIcon" alt="feedback-icon"
+                        height="30em">
                     <div class="icon-text">Send feedback</div>
                 </div>
             </div>
         </header>
 
         <nav id="sidenavBackgroundImg">
-            <div id="sidenav-container">
+            <div id="sidenavContainer">
                 <div>
                     <div class="dropdown">
-                        <button onclick="toggle(0)" class="btn-style dropdown-btn">My Quizzes
+                        <button onclick="toggle(0)" class="nav-btn-style dropdown-btn">My Quizzes
                             <img src="https://svgshare.com/i/sSs.svg" alt="caret-down-icon"
                                 class="caret-down-icon"></button>
-                        <div class="btn-style dropdown-container no-display">
-                            <p><button class="btn-style"> Previous Quizzes</button></p>
-                            <p><button class="btn-style"> My Favourite Categories</button></p>
+                        <div class="nav-btn-style dropdown-container no-display">
+                            <p><button class="nav-btn-style"> Previous Quizzes</button></p>
+                            <p><button class="nav-btn-style"> My Favourite Categories</button></p>
                         </div>
                     </div>
 
 
                     <div class="dropdown">
-                        <button onclick="toggle(1)" class="btn-style dropdown-btn">My Account <img
+                        <button onclick="toggle(1)" class="nav-btn-style dropdown-btn">My Account <img
                                 src="https://svgshare.com/i/sSs.svg" alt="caret-down-icon"
                                 class="caret-down-icon"></button>
 
-                        <div class="btn-style dropdown-container no-display">
-                            <p><button class="btn-style"> Change Username</button></p>
-                            <p><button class="btn-style"> Change Password</button></p>
-                            <p><button class="btn-style"> Change Email</button></p>
-                            <p><button class="btn-style" id="deleteAccBtn"> Delete Account</button></p>
+                        <div class="nav-btn-style dropdown-container no-display">
+                            <p><button class="nav-btn-style"> Change Username</button></p>
+                            <p><button class="nav-btn-style"> Change Password</button></p>
+                            <p><button class="nav-btn-style"> Change Email</button></p>
+                            <p><button class="nav-btn-style" id="deleteAccBtn"> Delete Account</button></p>
                         </div>
                     </div>
                 </div>
@@ -65,19 +68,18 @@
                 <br>
 
                 <div>
-                    <button class="btn-style" id="logOutBtn">Log Out</button>
+                    <button class="nav-btn-style" id="logOutBtn">Log Out</button>
                 </div>
             </div>
         </nav>
 
 
-        <section>
+        <main>
 
             <div id="playBtnContainer">
                 <button id="playBtn">I want to play!</button>
             </div>
 
-            <!-- </div> -->
 
             <div id="beforeQuizContainer">
                 <div id="userChoicesContainer" class="no-display">
@@ -104,10 +106,9 @@
                 </div>
             </div>
 
-            <div id="questionsContainer">
+            <div id="questionsContainer" class="no-display">
 
-                <!-- <div id="countdownDuration">/</div> -->
-                <div id="countdown"></div>
+                <p>Time: <span id="countdownDuration"></span> / <span id="countdown"></span></p>
 
             </div>
 
@@ -120,12 +121,12 @@
                 <button id="findResultBtn">Find my result!</button>
             </div>
 
-            <div class="popup-window feedbackFormContainer" id="feedbackForm">
+            <div class="popup-window feedback-form-container" id="feedbackForm">
                 <div class="feedback-form">
                     <!-- close button -->
                     <a href="#" class="close"></a>
 
-                    <h3>Contact Us</h3>
+                    <p>Contact Us</p>
 
                     <p>Got a question? We'd love to hear from you. Send us a message
                         and we'll respond as soon as possible.</p>
@@ -150,11 +151,11 @@
 
 
             <div class="no-display" id="previousQuizzes">
-                <h6>Previous Quizzes Info</h6>
+                <p>Previous Quizzes Info</p>
 
             </div>
 
-        </section>
+        </main>
 
 
         <footer>
