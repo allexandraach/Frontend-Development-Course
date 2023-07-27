@@ -53,6 +53,11 @@ body {
     display: none !important;
 }
 
+::selection {
+    background-color:#e98f0b; /* Replace with your desired color */
+    color: white; /* Replace with the text color you want for the selected text */
+  }
+
 .gradient-custom-2 {
     /* fallback for old browsers */
     background: #fccb90;
@@ -137,7 +142,7 @@ header {
 
 }
 
-.icon-item:hover + div {
+.icon-item:hover+div {
     visibility: visible;
 
 }
@@ -168,7 +173,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--color-secondary);
-    
+
 }
 
 #sidenavBackgroundImg {
@@ -196,6 +201,7 @@ nav {
 button {
     background-color: transparent;
     border: none;
+    cursor: pointer;
     margin-left: 1rem;
 }
 
@@ -304,28 +310,33 @@ select {
 
 }
 
- #quizQuestion {
+#quizQuestion {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
     letter-spacing: 1px;
-    animation: 
-    typing 2s steps(40, end)
+    animation:
+        typing 2s steps(40, end)
 }
 
 /* TO BE IMPROVED IN THE FUTURE AS DIRECTION IS WRONG */
-#quizQuestion + p {
+#quizQuestion+p {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    animation: 
-    typing 3s steps(40, end)
+    animation:
+        typing 3s steps(40, end)
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
 
 
 label {
@@ -358,82 +369,40 @@ footer a:hover {
 
 .link-item {
     padding: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     text-decoration: none;
 }
 
 /* FEEDBACK FORM */
 
-.popup-window {
+#feedbackFormContainer {
     display: none;
-}
-
-.popup-window:before {
-    content: "";
     position: fixed;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.25);
-    z-index: 999;
-
-    /* fade in */
-    transition: opacity 0.2s ease-in-out;
-}
-
-.popup-window:target {
-    position: absolute;
-    left: 33%;
-    bottom: 9%;
-    width: 500px;
-    display: flex;
-}
-
-.popup-window .close {
-    position: relative;
-    display: block;
-}
-
-.popup-window .close::after {
-    right: -1rem;
-    top: -1rem;
-    width: 2rem;
-    height: 2rem;
-    position: absolute;
-    display: flex;
-    z-index: 1;
-    align-items: center;
-    justify-content: center;
-    background-color: #344f15;
-    border-radius: 50%;
-    color: white;
-    content: "×";
-    cursor: pointer;
-}
-
-textarea {
-    width: 450px;
-    height: 116px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
 }
 
 .feedback-form {
-    width: 28em;
+    width: min-content;
+    padding: 30px;
+    border-radius: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to top, #75933a, #8BC34A);
 }
 
-.feedback-form>p {
+h2,
+.feedback-form > p, .feedback-form label {
     color: white;
     margin-top: 6px;
     line-height: 1.5;
     text-align: center;
-}
-
-
-.feedback-form-container {
-    padding: 20px;
-    flex-direction: column;
-    align-items: center;
-    background-image: linear-gradient(to top, #75933a, #8BC34A);
 }
 
 .user-input {
@@ -443,12 +412,41 @@ textarea {
     margin-bottom: 4px;
 }
 
-.submit-btn {
-    width: 455px;
+#submitBtn {
+    width: 452px;
     padding: 13px;
+    margin-left: 0;
     color: white;
     background-color: #496925;
     border: 2px solid #253e0a;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#submitBtn:hover {
+    background-color: #1f3a08;
+    border-color: #1f3a08;
+}
+
+#closePopupBtn{
+    right: 21px;
+    top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #0e1406;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+
+textarea {
+    width: 452px;
+    height: 116px;
+    resize: vertical;
 }
 
 @media screen and (max-width: 962px) {
@@ -490,7 +488,7 @@ textarea {
         flex-direction: column;
     }
 
-/* for some reason or another the browser doesn't recognize & apply this */
+    /* for some reason or another the browser doesn't recognize & apply this */
     h1 {
         padding-top: 1rem;
     }

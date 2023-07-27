@@ -276,7 +276,7 @@ function toggle(dropdownNo) {
 
     dropdownContainer.classList.toggle("no-display");
     dropdownContainer.classList.toggle("active-dropdown");
-    
+
     selectedButton.classList.toggle("bold");
 
 }
@@ -297,6 +297,37 @@ function toggleTheme() {
     }
 
 };
+
+// DISPLAY/ HIDE POPUP WINDOW (SEND FEEDBACK DIV)
+
+const feedbackFormContainer = document.getElementById("feedbackFormContainer");
+
+function showPopup() {
+    feedbackFormContainer.style.display = "block";
+}
+
+// Disable buttons on the website except the ones in the popup
+
+const websiteButtons = document.querySelectorAll("button:not(#submitBtn, #closePopupBtn)");
+for (let i = 0; i < websiteButtons.length; i++) {
+    websiteButtons[i].disabled = true;
+}
+
+// Function to hide the popup
+function hidePopup() {
+    feedbackFormContainer.style.display = "none";
+    // Enable all buttons on the website
+    for (let i = 0; i < websiteButtons.length; i++) {
+        websiteButtons[i].disabled = false;
+    }
+}
+
+// display a thank you message to the user who sent feedback
+
+submitFeedbackBtn = document.getElementById("submitBtn");
+
+submitFeedbackBtn.addEventListener ("click", () => {hidePopup()
+alert("Thank you for taking the time to share your feedback with us!");})
 
 // DELETE ACCOUNT
 

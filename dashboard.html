@@ -31,7 +31,7 @@
 
                 <div>
                     <img class="icon-item" src="https://svgshare.com/i/sSJ.svg" id="feedbackIcon" alt="feedback-icon"
-                        height="30em">
+                        height="30em" onclick="showPopup()">
                     <div class="icon-text">Send feedback</div>
                 </div>
             </div>
@@ -121,27 +121,31 @@
                 <button id="findResultBtn">Find my result!</button>
             </div>
 
-            <div class="popup-window feedback-form-container" id="feedbackForm">
+            <div id="feedbackFormContainer">
                 <div class="feedback-form">
-                    <!-- close button -->
-                    <a href="#" class="close"></a>
+                    <button id="closePopupBtn" onclick="hidePopup()"> x </button>
 
-                    <p>Contact Us</p>
+                    <h2>Contact Us</h2>
 
                     <p>Got a question? We'd love to hear from you. Send us a message
                         and we'll respond as soon as possible.</p>
 
-                    <br>
+                        <br>
 
+                        <!-- future improvement: to send feedback to database -->
                     <form action="mailto:achimov_alexandra@yahoo.com" method="post">
 
                         <label for="text">Name*</label>
                         <p><input class="user-input" type="text" required></p>
+                        
                         <label for="email">Email address*</label>
                         <p><input class="user-input" type="email" name="email" id="email" required></p>
+                       
                         <label for="textarea">Message</label>
                         <p><textarea> </textarea></p>
-                        <p><button class="submit-btn" type="submit">Send Message</button></p>
+                       
+                        <button id="submitBtn" type="submit">Send Message</button>
+
 
                     </form>
 
