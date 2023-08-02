@@ -3,17 +3,15 @@
     padding: 0;
 }
 
-body {
+/* body {
     overflow: hidden;
-}
+} */
 
 @media (min-width: 768px) {
     .gradient-form {
         height: 100vh !important;
     }
-}
 
-@media (min-width: 769px) {
     .gradient-custom-2 {
         border-top-right-radius: .3rem;
         border-bottom-right-radius: .3rem;
@@ -35,11 +33,11 @@ body {
 
 .theme-dark {
     --color-primary: #496925;
-    --color-secondary: #55832b;
+    --color-secondary: #315213;
     --color-accent: white;
     --font-color: #cade9f;
-    --background-color: #6d944b;
-    --background-brightness: 80%;
+    --background-color: #57783a;
+    --background-brightness: 63%;
     --gradient-primary: to right, #334011 0%, #718028 51%, #384011 100%;
     --gradient-secondary: 117deg, rgba(65, 136, 0) 39.2%, rgba(133, 221, 53) 156.2%;
 
@@ -54,9 +52,11 @@ body {
 }
 
 ::selection {
-    background-color:#e98f0b; /* Replace with your desired color */
-    color: white; /* Replace with the text color you want for the selected text */
-  }
+    background-color: #e98f0b;
+    /* Replace with your desired color */
+    color: white;
+    /* Replace with the text color you want for the selected text */
+}
 
 .gradient-custom-2 {
     /* fallback for old browsers */
@@ -106,7 +106,7 @@ body {
         "head head head"
         "nav main main"
         "foot foot foot";
-    grid-template-rows: 7.4rem 32rem 9rem;
+    grid-template-rows: 7.4rem 40rem 9rem;
     grid-template-columns: 13rem 1fr;
 }
 
@@ -127,7 +127,19 @@ header {
     /* box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; */
 }
 
+#logoImg {
+    width: 65px;
+    margin-left: -109px;
+}
+
+h1 {
+    color: var(--font-color);
+    margin-top: 2px;
+    margin-left: -127px;
+}
+
 #iconItemContainer {
+    margin-left: 28rem;
     display: flex;
 }
 
@@ -153,10 +165,10 @@ header {
 
 .icon-text {
     color: black;
-    /* text-align: center; */
+    text-align: center;
     visibility: hidden;
     padding-top: 3px;
-    margin-left: -2px;
+    margin-left: -38px;
 }
 
 nav {
@@ -184,6 +196,13 @@ nav {
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
+h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--font-color);
+}
+
 .nav-btn-style {
     padding-left: 14px;
     padding-bottom: 14px;
@@ -209,20 +228,28 @@ button {
     font-weight: 900;
 }
 
-.active-dropdown {
+.dropdown-container {
     background-color: var(--color-primary);
     opacity: 85%;
+    position: relative;
+    left: 126px;
+    bottom: 27px;
 }
 
-.dropdown-container>p:hover {
+.dropdown-container > p:hover {
     background-color: #81aa53;
 }
 
-.caret-down-icon {
+.caret-right-icon {
     height: 18px;
-    display: inline;
     float: right;
-    padding-left: 34px;
+    padding-top: 1px;
+    padding-left: 3px;
+    transform: rotate(-89deg);
+}
+
+#deleteAccountBtn {
+    color: red;
 }
 
 main {
@@ -299,15 +326,15 @@ select {
 #questionsContainer {
     height: max-content;
     width: 38rem;
-    background-image: linear-gradient(var(--gradient-secondary));
+    border: 4px solid var(--font-color);
+    word-wrap: break-word;
 
 }
 
 #questionsContainer p {
     color: var(--font-color);
     padding: 1rem;
-    margin: 1rem;
-
+    margin: 1rem 1rem 1rem 0;
 }
 
 #quizQuestion {
@@ -349,27 +376,38 @@ input[type="radio"] {
     accent-color: #586c31;
 }
 
-footer {
-    background-color: var(--color-secondary);
-    grid-area: foot;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-}
-
-footer a {
+#userScoreContainer+p {
+    text-align: center;
     color: var(--font-color);
 }
 
-footer a:hover {
+footer {
+    grid-area: foot;
+    background-color: var(--color-secondary);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-nav a {
+    color: var(--font-color);
+}
+
+.footer-nav a:hover {
     color: var(--color-accent);
 }
 
+footer p {
+    color: var(--font-color);
+    text-align: center;
+}
 
 .link-item {
-    padding: 3rem;
-    margin-bottom: 2rem;
+    padding: 3rem 0 2rem 3rem;
     text-decoration: none;
 }
 
@@ -397,8 +435,9 @@ footer a:hover {
     background-image: linear-gradient(to top, #75933a, #8BC34A);
 }
 
-h2,
-.feedback-form > p, .feedback-form label {
+h3,
+.feedback-form>p,
+.feedback-form label {
     color: white;
     margin-top: 6px;
     line-height: 1.5;
@@ -412,7 +451,7 @@ h2,
     margin-bottom: 4px;
 }
 
-#submitBtn {
+#submitFeedbackBtn {
     width: 452px;
     padding: 13px;
     margin-left: 0;
@@ -422,12 +461,12 @@ h2,
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-#submitBtn:hover {
+#submitFeedbackBtn:hover {
     background-color: #1f3a08;
     border-color: #1f3a08;
 }
 
-#closePopupBtn{
+#closePopupBtn {
     right: 21px;
     top: 1rem;
     width: 2rem;
@@ -488,9 +527,8 @@ textarea {
         flex-direction: column;
     }
 
-    /* for some reason or another the browser doesn't recognize & apply this */
-    h1 {
-        padding-top: 1rem;
+    #logoImg {
+        display: none;
     }
 
 
@@ -516,11 +554,7 @@ textarea {
 
 
     .icon-item {
-        margin-top: 24px;
-        margin-bottom: 0;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 0;
+        margin-top: 24px 0 0 0 0;
     }
 
 

@@ -14,7 +14,29 @@ function displayElem(toDisplay) {
 
 function redirectTo(filename) {
     location.href = filename + ".html";
+    return;
 }
+
+// APPLY USER'S PREFERENCES WHEN REFRESHING THE PAGE
+
+let storedLanguage;
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const storedTheme = localStorage.getItem("theme-preference");
+
+    if (storedTheme) {
+        setTheme(storedTheme);
+        changeThemeText();
+    };
+
+    storedLanguage = localStorage.getItem("language");
+
+    if (storedLanguage) {
+        changeLanguage(storedLanguage);
+    };
+
+});
 
 // doesn't work; will use Local Storage for now
 
@@ -66,7 +88,7 @@ class User {
             redirectTo("dashboard");
 
         } else {
-            alert("Login failed!");
+            alert("Username or password is not correct. Please try again.");
         }
 
     }
@@ -188,32 +210,31 @@ let repeatedPassword;
 if (registerBtn) {
     registerBtn.addEventListener("click", () => {
 
+        let userInfoArray = [];
+
         newUsername = document.getElementById("form3Example1cg").value;
         newEmail = document.getElementById("form3Example3cg").value;
         newPassword = document.getElementById("form3Example4cg").value;
         repeatedPassword = document.getElementById("form3Example4cdg").value;
-        let isValid;
+
+        let isValid = true;
+
+        if (newUsername.length == 0 || newEmail.length == 0 || newPassword.length == 0 ||
+            repeatedPassword.length == 0) {
+            alert("Please fill in all the fields!");
+            isValid = false;
+        }
 
         if (newPassword !== repeatedPassword) {
             alert("Inserted passwords do not match!");
-        } else {
-            isValid = true;
+            isValid = false;
         }
 
+        let termsOfServiceBtn = document.getElementById("termsOfService");
         if (!termsOfServiceBtn.checked) {
             alert("To create an account, you must agree to the Terms of Service.");
-        } else {
-            isValid = true;
+            isValid = false;
         }
-
-        if (newUsername.length == 0 || newEmail.length == 0 || newPassword.length == 0 ||
-            repeatedPassword == 0) {
-            alert("Please fill in all the fields!");
-        } else {
-            isValid = true;
-        }
-
-        // future improvements: verify that username and email are not taken
 
         if (isValid) {
             newUser = new User(newUsername, newPassword, newEmail);
@@ -239,8 +260,12 @@ if (registerBtn) {
         }
 
     }
+
     )
-};
+}
+
+// future improvements: verify that username and email are not taken
+
 
 // BACK TO LOGIN PAGE
 
@@ -265,57 +290,237 @@ if (localStorage.length) {
     currentUser = new LoggedUser(localStorage.getItem("username"), localStorage.getItem("password"));
     console.log(currentUser);
     // DISPLAY USERNAME ON DASHBOARD PAGE TO WELCOME USER
-    displayUsername.textContent = currentUser.username;
+    displayUsername.textContent = currentUser.username + "!";
 }
 
+// DISPLAY HEADER NAV DROPDOWN WHEN HOVERING OVER 
+let dropdownContainer;
 
+function displayDropdownMenu(dropdownNo) {
+    dropdownContainer = document.getElementsByClassName("dropdown-container")[dropdownNo];
+    selectedButton = document.getElementsByClassName("dropdown-btn")[dropdownNo];
 
-function toggle(dropdownNo) {
-    const dropdownContainer = document.getElementsByClassName("dropdown-container")[dropdownNo];
-    const selectedButton = document.getElementsByClassName("dropdown-btn")[dropdownNo];
-
-    dropdownContainer.classList.toggle("no-display");
-    dropdownContainer.classList.toggle("active-dropdown");
-
-    selectedButton.classList.toggle("bold");
+    displayElem(dropdownContainer);
 
 }
+
+function hideDropdownMenu(dropdownNo) {
+    dropdownContainer = document.getElementsByClassName("dropdown-container")[dropdownNo];
+
+    hideElem(dropdownContainer);
+
+}
+
+// HIDE HEADER NAV DROPDOWN WHEN MOVING MOUSE OUT
+
 
 
 // CHANGE THEME
 
 function setTheme(themeName) {
-    localStorage.setItem('theme', themeName);
+
     document.documentElement.className = themeName;
+    localStorage.setItem("theme-preference", themeName);
 }
 
 function toggleTheme() {
-    if (localStorage.getItem('theme') === 'theme-dark') {
-        setTheme('theme-light');
+
+    if (localStorage.getItem("theme-preference") === "theme-dark") {
+        setTheme("theme-light");
+        changeThemeText();
     } else {
-        setTheme('theme-dark');
+        setTheme("theme-dark");
+        changeThemeText();
     }
 
 };
 
-// DISPLAY/ HIDE POPUP WINDOW (SEND FEEDBACK DIV)
+function changeThemeText() {
 
-const feedbackFormContainer = document.getElementById("feedbackFormContainer");
+const themeText = document.getElementById("themeText");
 
-function showPopup() {
-    feedbackFormContainer.style.display = "block";
+    if (localStorage.getItem("language") === "ro") {
+
+        if (localStorage.getItem("theme-preference") === "theme-light") {
+            themeText.textContent = "Tema închisă";
+        } else {
+            themeText.textContent = "Tema deschisă";
+        }
+    }
+
+    if (localStorage.getItem("language") === "en" || !localStorage.getItem("language")) {
+
+        if (localStorage.getItem("theme-preference") === "theme-dark") {
+            themeText.textContent = "Light theme";
+        } else {
+            themeText.textContent = "Dark theme";
+        }
+
+    }
+
 }
 
-// Disable buttons on the website except the ones in the popup
 
-const websiteButtons = document.querySelectorAll("button:not(#submitBtn, #closePopupBtn)");
-for (let i = 0; i < websiteButtons.length; i++) {
-    websiteButtons[i].disabled = true;
+// CHANGE LANGUAGE 
+
+const languageText = document.getElementById("languageText");
+const changeLangBtn = document.getElementById("changeLangBtn");
+
+changeLangBtn.addEventListener("click", () => {
+
+    if (localStorage.getItem("language") === "ro") {
+        changeLanguage("en");
+        setLanguage("en");
+        siteName.style.margin = "2px 0 0 -127px";
+
+    } else {
+        changeLanguage("ro");
+        setLanguage("ro");
+        siteName.style.margin = "2px 0 0 -140px";
+    }
+
+})
+
+// set language selection in local storage
+
+function setLanguage(lang) {
+    localStorage.setItem("language", lang);
+
+    if (localStorage.getItem("language") === "ro") {
+        languageText.textContent = "EN";
+    } else {
+        languageText.textContent = "RO";
+    }
+
+    // update the language in the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set("lang", lang);
+    window.history.replaceState({}, '', `${window.location.pathname}?${urlParams.toString()}`);
+}
+
+function changeLanguage(lang) {
+
+    const textTranslations = {
+        ro: {
+            siteName: "Quizul Superlativelor",
+            themeText: localStorage.getItem("theme-preference") === "theme-dark" ? "Tema deschisă" : "Tema închisă",
+            feedbackText: "Trimite feedback",
+            userGreet: "Bine ai venit,",
+            headerNavBtn1: "Quizurile mele",
+            previousQuizzesBtn: "Quizuri anterioare",
+            favCategBtn: "Categorii preferate",
+            headerNavBtn2: "Contul meu",
+            changeUsernameBtn: "Schimbă numele de utilizator",
+            changePasswordBtn: "Schimbă parola",
+            changeEmailBtn: "Schimbă adresa de e-mail",
+            deleteAccountBtn: "Ștergere cont",
+            logOutBtn: "Deconectare",
+            playBtn: "Vreau să joc!",
+            difficultyLevel: "Alege nivelul de dificultate:",
+            optionEasy: "Ușor",
+            optionMedium: "Mediu",
+            optionHard: "Greu",
+            gameCategory: "Alege categoria:",
+            categoryHumanities: "Științe Umaniste",
+            categorySocialSciences: "Științe Sociale",
+            categoryNaturalSciences: "Științe Naturale",
+            startQuizBtn: "Începe jocul!",
+            findResultBtn: "Rezultatul meu",
+            timeText: "Timp",
+            resultText: "Felicitări! Ai terminat quizul. Ai obținut un scor de  din 15. Pentru a începe un joc nou, dă un refresh la pagină.",
+            feedbackFormTitle: "Contactează-ne",
+            feedbackFormText: "Ai întrebări? Ne-am bucura să le auzim. Trimite-ne un mesaj și vom răspunde cât de repede putem.",
+            feedbackFormName: "Nume",
+            feedbackFormEmail: "Adresă de e-mail",
+            feedbackMsg: "Mesaj",
+            submitFeedbackBtn: "Trimite mesaj",
+            aboutUsBtn: "Despre Noi",
+            termsBtn: "Termeni și Condiții",
+            privacyBtn: "Politica de Confidențialitate",
+            copyrightText: "Quizul Superlativelor | © 2023 Toate drepturile rezervate."
+        },
+        en: {
+            siteName: "Superlatives Quiz",
+            themeText: localStorage.getItem("theme-preference") === "theme-dark" ? "Light theme" : "Dark theme",
+            feedbackText: "Send feedback",
+            userGreet: "Welcome,",
+            headerNavBtn1: "My Quizzes",
+            previousQuizzesBtn: "Previous quizzes",
+            favCategBtn: "My favourite categories",
+            headerNavBtn2: "My Account",
+            changeUsernameBtn: "Change username",
+            changePasswordBtn: "Change password",
+            changeEmailBtn: "Change e-mail",
+            deleteAccountBtn: "Delete account",
+            logOutBtn: "Logout",
+            playBtn: "I want to play!",
+            difficultyLevel: "Choose your difficulty level:",
+            optionEasy: "Easy",
+            optionMedium: "Medium",
+            optionHard: "Hard",
+            gameCategory: "Choose your category:",
+            categoryHumanities: "Humanities",
+            categorySocialSciences: "Social Sciences",
+            categoryNaturalSciences: "Natural Sciences",
+            startQuizBtn: "Start the game!",
+            findResultBtn: "My results",
+            timeText: "Time",
+            resultText: "Congratulations on finishing the quiz! Your score is  out of 15. Please refresh the page to start a new game.",
+            feedbackFormTitle: "Contact us",
+            feedbackFormText: "Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+            feedbackFormName: "Name",
+            feedbackFormEmail: "E-mail address",
+            feedbackMsg: "Message",
+            submitFeedbackBtn: "Send message",
+            aboutUsBtn: "About Us",
+            termsBtn: "Terms and Conditions",
+            privacyBtn: "Privacy Policy",
+            copyrightText: "Copyright © 2023 Superlatives Quiz All rights reserved."
+        }
+
+    }
+
+    for (const elementID in textTranslations[lang]) {
+        const element = document.getElementById(elementID);
+        const translation = textTranslations[lang][elementID];
+    
+        if (element && !element.children) {
+            element.textContent = translation;
+        } else {
+            const elementChildren = Array.from(element.children);
+
+            elementChildren.forEach((child) => {
+                element.removeChild(child);
+            });
+
+            console.log(element.textContent);
+            console.log(translation);
+            element.textContent = translation;
+
+            elementChildren.forEach((child) => {
+                element.appendChild(child);
+            });
+        }
+
+    }
+};
+
+// FEEDBACK FORM
+
+const feedbackForm = document.getElementById("feedbackFormContainer");
+const websiteButtons = document.querySelectorAll("button:not(#submitFeedbackBtn, #closePopupBtn)");
+
+function showPopup() {
+    feedbackForm.style.display = "block";
+    // Disable buttons on the website except the ones in the popup
+    for (let i = 0; i < websiteButtons.length; i++) {
+        websiteButtons[i].disabled = true;
+    }
 }
 
 // Function to hide the popup
 function hidePopup() {
-    feedbackFormContainer.style.display = "none";
+    feedbackForm.style.display = "none";
     // Enable all buttons on the website
     for (let i = 0; i < websiteButtons.length; i++) {
         websiteButtons[i].disabled = false;
@@ -324,10 +529,12 @@ function hidePopup() {
 
 // display a thank you message to the user who sent feedback
 
-submitFeedbackBtn = document.getElementById("submitBtn");
+submitFeedbackBtn = document.getElementById("submitFeedbackBtn");
 
-submitFeedbackBtn.addEventListener ("click", () => {hidePopup()
-alert("Thank you for taking the time to share your feedback with us!");})
+submitFeedbackBtn.addEventListener("click", () => {
+    hidePopup();
+    alert("Thank you for taking the time to share your feedback with us!");
+})
 
 // DELETE ACCOUNT
 

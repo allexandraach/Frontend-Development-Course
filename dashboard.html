@@ -6,8 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Page</title>
+    <link rel="icon" type="image/x-icon" href="images/logo-icon.png">
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="typography.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500&family=Space+Grotesk:wght@500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -15,52 +22,57 @@
 
         <header id="headerNav">
 
-            <h1>Welcome, <span id="displayUsername"></span>!</h1>
+            <div><img src="https://i.ibb.co/tCsh7dV/quiz-icon.png" id="logoImg" alt="logo">
+                <h1 id="siteName">Superlatives Quiz</h1>
+            </div>
 
             <div id="iconItemContainer">
                 <div>
-                    <img class="icon-item" src="https://svgshare.com/i/sSw.svg" onclick="toggleTheme()" alt="theme-icon"
-                        height="30em">
-                    <div class="icon-text">Change theme</div>
+                    <img class="icon-item" src="https://svgshare.com/i/sSw.svg" alt="theme-icon" height="30em"
+                        onclick="toggleTheme()">
+                    <div class="icon-text" id="themeText">Dark theme</div>
                 </div>
 
                 <div>
-                    <img class="icon-item" src="https://svgshare.com/i/sRL.svg" alt="language-icon" height="30em">
-                    <div class="icon-text"> Change language</div>
+                    <img class="icon-item" id="changeLangBtn" src="https://svgshare.com/i/sRL.svg" alt="language-icon"
+                        height="30em">
+                    <div class="icon-text" id="languageText"> RO </div>
                 </div>
 
                 <div>
                     <img class="icon-item" src="https://svgshare.com/i/sSJ.svg" id="feedbackIcon" alt="feedback-icon"
                         height="30em" onclick="showPopup()">
-                    <div class="icon-text">Send feedback</div>
+                    <div class="icon-text" id="feedbackText">Send feedback </div>
                 </div>
             </div>
         </header>
 
         <nav id="sidenavBackgroundImg">
+            <h2 id="userGreet" > Welcome, <span id="displayUsername"></span></h2>
             <div id="sidenavContainer">
                 <div>
                     <div class="dropdown">
-                        <button onclick="toggle(0)" class="nav-btn-style dropdown-btn">My Quizzes
-                            <img src="https://svgshare.com/i/sSs.svg" alt="caret-down-icon"
-                                class="caret-down-icon"></button>
-                        <div class="nav-btn-style dropdown-container no-display">
-                            <p><button class="nav-btn-style"> Previous Quizzes</button></p>
-                            <p><button class="nav-btn-style"> My Favourite Categories</button></p>
+                        <button onmouseover="displayDropdownMenu(0)" class="nav-btn-style dropdown-btn"
+                            id="headerNavBtn1"> My Quizzes
+                            <img src="https://svgshare.com/i/sSs.svg" alt="caret-right-icon"
+                                class="caret-right-icon"></button>
+                        <div onmouseleave="hideDropdownMenu(0)" class="nav-btn-style dropdown-container no-display">
+                            <p><button class="nav-btn-style" id="previousQuizzesBtn"> Previous Quizzes</button></p>
+                            <p><button class="nav-btn-style" id="favCategBtn" > My Favourite Categories</button></p>
                         </div>
                     </div>
 
 
                     <div class="dropdown">
-                        <button onclick="toggle(1)" class="nav-btn-style dropdown-btn">My Account <img
-                                src="https://svgshare.com/i/sSs.svg" alt="caret-down-icon"
-                                class="caret-down-icon"></button>
+                        <button onmouseover="displayDropdownMenu(1)" class="nav-btn-style dropdown-btn"
+                            id="headerNavBtn2"> My Account <img src="https://svgshare.com/i/sSs.svg"
+                                alt="caret-right-icon" class="caret-right-icon"></button>
 
-                        <div class="nav-btn-style dropdown-container no-display">
-                            <p><button class="nav-btn-style"> Change Username</button></p>
-                            <p><button class="nav-btn-style"> Change Password</button></p>
-                            <p><button class="nav-btn-style"> Change Email</button></p>
-                            <p><button class="nav-btn-style" id="deleteAccBtn"> Delete Account</button></p>
+                        <div onmouseleave="hideDropdownMenu(1)" class="nav-btn-style dropdown-container no-display">
+                            <p><button class="nav-btn-style" id="changeUsernameBtn"> Change username</button></p>
+                            <p><button class="nav-btn-style" id="changePasswordBtn"> Change password</button></p>
+                            <p><button class="nav-btn-style" id="changeEmailBtn"> Change email</button></p>
+                            <p><button class="nav-btn-style" id="deleteAccountBtn"> Delete account</button></p>
                         </div>
                     </div>
                 </div>
@@ -68,7 +80,7 @@
                 <br>
 
                 <div>
-                    <button class="nav-btn-style" id="logOutBtn">Log Out</button>
+                    <button class="nav-btn-style" id="logOutBtn"> Log Out</button>
                 </div>
             </div>
         </nav>
@@ -77,44 +89,71 @@
         <main>
 
             <div id="playBtnContainer">
-                <button id="playBtn">I want to play!</button>
+                <button id="playBtn"> I want to play!</button>
+            </div>
+
+            <div class="no-display" id="accountInfoContainer">
+                <!-- change email -->
+                <input type="email" id="current-email" placeholder="Email" />
+                <label for="current-email"></label>
+
+                <input type="email" id="current-email" placeholder="Email" />
+                <label for="new-email"></label>
+
+                <!-- change password -->
+                <input type="password" id="current-password">
+                <label for="current-password"></label>
+
+                <input type="password" id="new-password">
+                <label for="new-password"></label>
+
+                <!-- change username -->
+                <input type="text" id="current-username">
+                <label for="current-username"></label>
+
+                <input type="text" id="new-username">
+                <label for="new-username"></label>
+
             </div>
 
 
             <div id="beforeQuizContainer">
                 <div id="userChoicesContainer" class="no-display">
-                    <label for="Difficulty">Choose your difficulty level:</label>
+                    <label for="Difficulty" id="difficultyLevel">Choose your difficulty level:</label>
                     <select id="difficultyFromUser" required>
-                        <option value="Easy"> Easy</option>
-                        <option value="Medium"> Medium</option>
-                        <option value="Hard"> Hard</option>
+                        <option value="Easy" id="optionEasy"> Easy </option>
+                        <option value="Medium" id="optionMedium" > Medium </option>
+                        <option value="Hard" id="optionHard"> Hard </option>
                     </select>
 
                     <br>
                     <br>
 
-                    <p><label for="Category">Choose your category:</label>
+                    <p><label for="Category" id="gameCategory">Choose your category:</label>
                         <select id="categoryFromUser" required>
                     </p>
-                    <option value="Humanities"> Humanities</option>
-                    <option value="Social Sciences">Social Sciences</option>
-                    <option value="Natural Sciences">Natural Sciences</option>
+                    <option value="Humanities" id="categoryHumanities"> Humanities</option>
+                    <option value="Social Sciences" id="categorySocialSciences"> Social Sciences</option>
+                    <option value="Natural Sciences" id="categoryNaturalSciences"> Natural Sciences</option>
                     </select>
                 </div>
 
-                <div id="startQuizBtnContainer" class="no-display"><button id="startQuizBtn">Start the quiz!</button>
+                <div id="startQuizBtnContainer" class="no-display"><button id="startQuizBtn"> Start the quiz!</button>
                 </div>
             </div>
 
             <div id="questionsContainer" class="no-display">
 
-                <p>Time: <span id="countdownDuration"></span> / <span id="countdown"></span></p>
+                <p id="timeText" id="countdownDuration"></span> / <span id="countdown"></span></p>
 
             </div>
 
-            <div class="no-display" id="userScoreContainer">Congratulations on finishing the quiz!
-                Your score is <span id="showUserScore"></span> out of 15. Please refresh the page
-                to start a new game.
+            <div class="no-display" id="userScoreContainer">
+
+                <p id="resultText"> Congratulations on finishing the quiz!
+                    Your score is <b><span id="showUserScore"></span></b> out of <b>15</b>. Please refresh the page
+                    to start a new game.
+                </p>
             </div>
 
             <div class="no-display" id="findResultBtnContainer">
@@ -125,26 +164,26 @@
                 <div class="feedback-form">
                     <button id="closePopupBtn" onclick="hidePopup()"> x </button>
 
-                    <h2>Contact Us</h2>
+                    <h3 id="feedbackFormTitle">Contact Us</h3>
 
-                    <p>Got a question? We'd love to hear from you. Send us a message
+                    <p id="feedbackFormText"> Got a question? We'd love to hear from you. Send us a message
                         and we'll respond as soon as possible.</p>
 
-                        <br>
+                    <br>
 
-                        <!-- future improvement: to send feedback to database -->
+                    <!-- future improvement: to send feedback to database -->
                     <form action="mailto:achimov_alexandra@yahoo.com" method="post">
 
-                        <label for="text">Name*</label>
+                        <label for="text" id="feedbackFormName">Name*</label>
                         <p><input class="user-input" type="text" required></p>
-                        
-                        <label for="email">Email address*</label>
+
+                        <label for="email" id="feedbackFormEmail">Email address*</label>
                         <p><input class="user-input" type="email" name="email" id="email" required></p>
-                       
-                        <label for="textarea">Message</label>
+
+                        <label for="textarea" id="feedbackMsg"> Message* </label>
                         <p><textarea> </textarea></p>
-                       
-                        <button id="submitBtn" type="submit">Send Message</button>
+
+                        <button id="submitFeedbackBtn" type="submit">Send Message</button>
 
 
                     </form>
@@ -154,7 +193,7 @@
             </div>
 
 
-            <div class="no-display" id="previousQuizzes">
+            <div class="no-display" id="previousQuizzesContainer">
                 <p>Previous Quizzes Info</p>
 
             </div>
@@ -164,9 +203,14 @@
 
         <footer>
 
-            <a href="#" class="link-item">About Us</a>
-            <a href="#" class="link-item">Terms and Conditions</a>
-            <a href="#" class="link-item">Privacy Policy</a>
+            <div class="footer-nav">
+                <a href="#" class="link-item" id="aboutUsBtn">About Us</a>
+                <a href="#" class="link-item" id="termsBtn">Terms and Conditions</a>
+                <a href="#" class="link-item" id="privacyBtn">Privacy Policy</a>
+            </div>
+            <br>
+
+            <p id="copyrightText">Copyright © 2023 Superlatives Quiz All rights reserved.</p>
         </footer>
 
     </div>
