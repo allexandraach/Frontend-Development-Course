@@ -1,3 +1,12 @@
+h1 {
+    font-size: 0.8rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
 #questionsContainer p {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
@@ -31,7 +40,11 @@ form {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h2, .feedback-form > p {
+h3, .feedback-form > p {
     font-family: 'Open Sans', sans-serif;
+}
+
+footer p {
+    font-size: smaller;
 }
 
