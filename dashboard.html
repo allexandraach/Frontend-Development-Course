@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Page</title>
+    <title> Dashboard Page </title>
     <link rel="icon" type="image/x-icon" href="images/logo-icon.png">
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="typography.css">
@@ -48,7 +48,7 @@
         </header>
 
         <nav id="sidenavBackgroundImg">
-            <h2 id="userGreet" > Welcome, <span id="displayUsername"></span></h2>
+            <h2 id="userGreet"> Welcome, <span id="displayUsername"></span></h2>
             <div id="sidenavContainer">
                 <div>
                     <div class="dropdown">
@@ -58,7 +58,7 @@
                                 class="caret-right-icon"></button>
                         <div onmouseleave="hideDropdownMenu(0)" class="nav-btn-style dropdown-container no-display">
                             <p><button class="nav-btn-style" id="previousQuizzesBtn"> Previous Quizzes</button></p>
-                            <p><button class="nav-btn-style" id="favCategBtn" > My Favourite Categories</button></p>
+                            <p><button class="nav-btn-style" id="favCategBtn"> My Favourite Categories</button></p>
                         </div>
                     </div>
 
@@ -122,7 +122,7 @@
                     <label for="Difficulty" id="difficultyLevel">Choose your difficulty level:</label>
                     <select id="difficultyFromUser" required>
                         <option value="Easy" id="optionEasy"> Easy </option>
-                        <option value="Medium" id="optionMedium" > Medium </option>
+                        <option value="Medium" id="optionMedium"> Medium </option>
                         <option value="Hard" id="optionHard"> Hard </option>
                     </select>
 
@@ -142,18 +142,31 @@
                 </div>
             </div>
 
-            <div id="questionsContainer" class="no-display">
+            <div id="quizContainer" class="no-display">
 
-                <p id="timeText" id="countdownDuration"></span> / <span id="countdown"></span></p>
+                <p id="timeText"><span id="countdownDuration"></span></span> <span id="countdown"></span></p>
+
+                <div id="questionWrapper"></div>
 
             </div>
 
             <div class="no-display" id="userScoreContainer">
 
+                <img src="https://svgshare.com/i/w5v.svg" alt="congratulations-icon" height="200px">
+
+                <!-- future improvement: change the message based on the scored obtained by the user -->
+
                 <p id="resultText"> Congratulations on finishing the quiz!
                     Your score is <b><span id="showUserScore"></span></b> out of <b>15</b>. Please refresh the page
                     to start a new game.
                 </p>
+
+                <!-- <p id="resultText"> Congratulations on finishing the quiz! Your score is: </p>
+
+                <p id="scoreText"><span></span><span id="showUserScore"></span> out of 15</p> -->
+
+                <!-- <p>I want to play again!</p> -->
+
             </div>
 
             <div class="no-display" id="findResultBtnContainer">

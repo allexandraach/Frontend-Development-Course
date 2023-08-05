@@ -1,6 +1,7 @@
 
 const apiUsers = 'http://localhost:3000/users';
 const apiQuestionsEN = 'http://localhost:3000/questionsEN';
+const apiQuestionsRO = 'http://localhost:3000/questionsRO';
 
 function hideElem(toHide) {
     toHide.classList.add("no-display");
@@ -19,8 +20,6 @@ function redirectTo(filename) {
 
 // APPLY USER'S PREFERENCES WHEN REFRESHING THE PAGE
 
-let storedLanguage;
-
 document.addEventListener('DOMContentLoaded', () => {
 
     const storedTheme = localStorage.getItem("theme-preference");
@@ -30,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         changeThemeText();
     };
 
-    storedLanguage = localStorage.getItem("language");
+    const storedLanguage = localStorage.getItem("language");
 
     if (storedLanguage) {
         changeLanguage(storedLanguage);
@@ -63,8 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // }
 
 // LOGIN PAGE
+// FUTURE IMPROVEMENT: CHANGE LANGUAGE FUNCTIONALITY
 
 // FUTURE IMPROVEMENT: MAKE THE PROPERTIES PRIVATE
+
+let loginSuccessful;
 
 class User {
     username;
@@ -85,6 +87,7 @@ class User {
             alert("Login successfully!")
             localStorage.setItem("username", this.username);
             localStorage.setItem("password", this.password);
+            loginSuccessful = true;
             redirectTo("dashboard");
 
         } else {
@@ -164,7 +167,7 @@ class LoggedUser extends User {
 }
 
 
-const loginBtn = document.getElementsByClassName("btn btn-primary btn-block fa-lg gradient-custom-2 mb-3")[0];
+const loginBtn = document.getElementById("loginBtn");
 const loginForm = document.getElementById("loginFormContainer");
 
 // LOGIN TO ACCOUNT
@@ -279,7 +282,6 @@ if (loginHereBtn) {
     )
 };
 
-
 // DASHBOARD PAGE
 
 // AFTER THE LOGIN
@@ -289,8 +291,10 @@ const displayUsername = document.getElementById("displayUsername");
 if (localStorage.length) {
     currentUser = new LoggedUser(localStorage.getItem("username"), localStorage.getItem("password"));
     console.log(currentUser);
+
     // DISPLAY USERNAME ON DASHBOARD PAGE TO WELCOME USER
     displayUsername.textContent = currentUser.username + "!";
+
 }
 
 // DISPLAY HEADER NAV DROPDOWN WHEN HOVERING OVER 
@@ -337,7 +341,7 @@ function toggleTheme() {
 
 function changeThemeText() {
 
-const themeText = document.getElementById("themeText");
+    const themeText = document.getElementById("themeText");
 
     if (localStorage.getItem("language") === "ro") {
 
@@ -366,20 +370,21 @@ const themeText = document.getElementById("themeText");
 const languageText = document.getElementById("languageText");
 const changeLangBtn = document.getElementById("changeLangBtn");
 
-changeLangBtn.addEventListener("click", () => {
+if (changeLangBtn) {
 
-    if (localStorage.getItem("language") === "ro") {
-        changeLanguage("en");
-        setLanguage("en");
-        siteName.style.margin = "2px 0 0 -127px";
+    changeLangBtn.addEventListener("click", () => {
 
-    } else {
-        changeLanguage("ro");
-        setLanguage("ro");
-        siteName.style.margin = "2px 0 0 -140px";
-    }
+        if (localStorage.getItem("language") === "ro") {
+            changeLanguage("en");
+            setLanguage("en");
 
-})
+        } else {
+            changeLanguage("ro");
+            setLanguage("ro");
+        }
+    })
+
+}
 
 // set language selection in local storage
 
@@ -398,6 +403,8 @@ function setLanguage(lang) {
     window.history.replaceState({}, '', `${window.location.pathname}?${urlParams.toString()}`);
 }
 
+const showUserScore = document.getElementById("showUserScore");
+
 function changeLanguage(lang) {
 
     const textTranslations = {
@@ -405,7 +412,7 @@ function changeLanguage(lang) {
             siteName: "Quizul Superlativelor",
             themeText: localStorage.getItem("theme-preference") === "theme-dark" ? "Tema deschisă" : "Tema închisă",
             feedbackText: "Trimite feedback",
-            userGreet: "Bine ai venit,",
+            userGreet: "Bine ai venit, " + "",
             headerNavBtn1: "Quizurile mele",
             previousQuizzesBtn: "Quizuri anterioare",
             favCategBtn: "Categorii preferate",
@@ -426,8 +433,9 @@ function changeLanguage(lang) {
             categoryNaturalSciences: "Științe Naturale",
             startQuizBtn: "Începe jocul!",
             findResultBtn: "Rezultatul meu",
-            timeText: "Timp",
-            resultText: "Felicitări! Ai terminat quizul. Ai obținut un scor de  din 15. Pentru a începe un joc nou, dă un refresh la pagină.",
+            timeText: "Timp: ",
+            resultText: "Felicitări! Scorul tău este: ",
+            // scoreText: " din 15.",
             feedbackFormTitle: "Contactează-ne",
             feedbackFormText: "Ai întrebări? Ne-am bucura să le auzim. Trimite-ne un mesaj și vom răspunde cât de repede putem.",
             feedbackFormName: "Nume",
@@ -443,7 +451,7 @@ function changeLanguage(lang) {
             siteName: "Superlatives Quiz",
             themeText: localStorage.getItem("theme-preference") === "theme-dark" ? "Light theme" : "Dark theme",
             feedbackText: "Send feedback",
-            userGreet: "Welcome,",
+            userGreet: "Welcome, " + "",
             headerNavBtn1: "My Quizzes",
             previousQuizzesBtn: "Previous quizzes",
             favCategBtn: "My favourite categories",
@@ -464,8 +472,9 @@ function changeLanguage(lang) {
             categoryNaturalSciences: "Natural Sciences",
             startQuizBtn: "Start the game!",
             findResultBtn: "My results",
-            timeText: "Time",
-            resultText: "Congratulations on finishing the quiz! Your score is  out of 15. Please refresh the page to start a new game.",
+            timeText: "Time: ",
+            resultText: "Congratulations on finishing the quiz! Your score is: ",
+            // scoreText: " out of 15.",
             feedbackFormTitle: "Contact us",
             feedbackFormText: "Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
             feedbackFormName: "Name",
@@ -481,28 +490,53 @@ function changeLanguage(lang) {
     }
 
     for (const elementID in textTranslations[lang]) {
+
         const element = document.getElementById(elementID);
         const translation = textTranslations[lang][elementID];
-    
+
         if (element && !element.children) {
             element.textContent = translation;
+
         } else {
+
             const elementChildren = Array.from(element.children);
 
-            elementChildren.forEach((child) => {
-                element.removeChild(child);
-            });
+            if (elementID === "scoreText") {
 
-            console.log(element.textContent);
-            console.log(translation);
-            element.textContent = translation;
+                elementChildren.forEach((child) => {
+                    element.removeChild(child);
+                });
+    
+                element.textContent = translation;
+    
+                elementChildren.forEach((child) => {
+                    element.insertAdjacentElement("beforebegin", showUserScore);
+                });
+                
+            } 
 
-            elementChildren.forEach((child) => {
-                element.appendChild(child);
-            });
+                elementChildren.forEach((child) => {
+                    element.removeChild(child);
+                });
+    
+                element.textContent = translation;
+    
+                elementChildren.forEach((child) => {
+                    element.appendChild(child);
+                });
+
+            }
+           
         }
 
+// reallign the name of the site based on language; doesn't work when refreshing the page/first entering the website
+
+    if (localStorage.getItem("language") === "ro") {
+        siteName.style.margin = "2px 0 0 -127px"
+    } else {
+        siteName.style.margin = "2px 0 0 -140px";
     }
+
 };
 
 // FEEDBACK FORM
@@ -531,10 +565,14 @@ function hidePopup() {
 
 submitFeedbackBtn = document.getElementById("submitFeedbackBtn");
 
-submitFeedbackBtn.addEventListener("click", () => {
-    hidePopup();
-    alert("Thank you for taking the time to share your feedback with us!");
-})
+if (submitFeedbackBtn) {
+
+    submitFeedbackBtn.addEventListener("click", () => {
+        hidePopup();
+        alert("Thank you for taking the time to share your feedback with us!");
+    }
+    )
+}
 
 // DELETE ACCOUNT
 
@@ -579,7 +617,6 @@ if (playBtn) {
         displayElem(startQuizBtnContainer);
         hideElem(playBtnContainer);
 
-
     })
 };
 
@@ -587,16 +624,18 @@ if (playBtn) {
 
 let countdown;
 
+const questionWrapper = document.getElementById("questionWrapper");
+
 function startCountdown(seconds) {
     let countdownValue = seconds + 1;
     // display the seconds available to answer the question
-    document.getElementById("countdownDuration").textContent = seconds;
+    document.getElementById("countdownDuration").textContent = seconds + "/";
 
     countdown = setInterval(() => {
         countdownValue--;
 
         // Update the no. of seconds as they pass 
-        document.getElementById("countdown").innerHTML = countdownValue;
+        document.getElementById("countdown").innerHTML = "" + countdownValue;
 
         if (countdownValue === 1) {
             countdownValue = seconds + 1;
@@ -644,15 +683,15 @@ function displayQuestion(data, currentIndex = 0) {
         let TimeOver = false;
 
         // Create question paragraph and add to the questions container
-        const questionsParagraph = document.createElement('p');
+        const questionsParagraph = document.createElement("p");
         const shownQuestions = document.createTextNode(currentQuestion.question);
         questionsParagraph.append(shownQuestions);
         questionsParagraph.setAttribute("id", "quizQuestion");
 
-        questionsContainer.appendChild(questionsParagraph);
+        questionWrapper.appendChild(questionsParagraph);
 
         // Create responses paragraph and add to the questions container
-        const responsesParagraph = document.createElement('p');
+        const responsesParagraph = document.createElement("p");
 
         let shownResponses = [];
         let radioButtons = [];
@@ -665,12 +704,12 @@ function displayQuestion(data, currentIndex = 0) {
             radioButtons[i].setAttribute("name", "options");
             radioButtons[i].setAttribute("value", currentQuestion.responses[i].response);
             //   event listener to each radio button to modify the flag when the user clicks on a radio button. 
-            radioButtons[i].addEventListener('change', () => {
+            radioButtons[i].addEventListener("change", () => {
                 userSelected = true; // set the flag to true when user selects a radio button
             });
             responsesParagraph.append(shownResponses, radioButtons[i]);
         }
-        document.getElementById('questionsContainer').appendChild(responsesParagraph);
+        document.getElementById("quizContainer").appendChild(responsesParagraph);
 
         // Set a timeout to display the next question after 8 seconds
 
@@ -686,8 +725,8 @@ function displayQuestion(data, currentIndex = 0) {
 
 
             // Remove the current question and responses from the questions container
-            document.getElementById('questionsContainer').removeChild(questionsParagraph);
-            document.getElementById('questionsContainer').removeChild(responsesParagraph);
+            document.getElementById("questionWrapper").removeChild(questionsParagraph);
+            document.getElementById("quizContainer").removeChild(responsesParagraph);
 
             // Display the next question and if all questions have been displayed, show button to find result
 
@@ -701,9 +740,8 @@ function displayQuestion(data, currentIndex = 0) {
 
     if (currentIndex >= data.length - 1) {
         clearInterval(countdown);
-        hideElem(questionsContainer);
+        hideElem(quizContainer);
         displayElem(findResultBtnContainer);
-
     }
 
 
@@ -723,7 +761,6 @@ if (findResultBtn) {
         // FIND USER'S SCORE
 
         const userScoreContainer = document.getElementById("userScoreContainer");
-        const showUserScore = document.getElementById("showUserScore");
 
         //filters only the string responses which have the isCorrect property set to
         // true and therefore are the correct answers to the questions
@@ -735,7 +772,7 @@ if (findResultBtn) {
         const userScore = userCorrectAnswers.length + 1;
 
         displayElem(userScoreContainer);
-        showUserScore.innerText = userScore;
+        showUserScore.innerText = "" + userScore + " / ";
         hideElem(findResultBtnContainer);
 
         // NOT WORKING; TO DO
@@ -750,7 +787,9 @@ let difficultyFromUser = document.getElementById('difficultyFromUser');
 const quizFromDatabase = [];
 
 const startQuizBtn = document.getElementById("startQuizBtn");
-const questionsContainer = document.getElementById('questionsContainer');
+const quizContainer = document.getElementById('quizContainer');
+
+const apiEndpoint = localStorage.getItem("language") === "ro" ? apiQuestionsRO : apiQuestionsEN;
 
 
 if (startQuizBtn) {
@@ -758,12 +797,12 @@ if (startQuizBtn) {
 
         hideElem(userChoicesContainer);
         hideElem(startQuizBtn);
-        displayElem(questionsContainer);
+        displayElem(quizContainer);
 
         categoryFromUser = categoryFromUser.value;
         difficultyFromUser = difficultyFromUser.value;
 
-        fetch(`${apiQuestionsEN}?difficulty=${difficultyFromUser}&category=${categoryFromUser}`)
+        fetch(`${apiEndpoint}?difficulty=${difficultyFromUser}&category=${categoryFromUser}`)
             .then(response => response.json())
             .then(json => {
                 quizFromDatabase.push(...json);
