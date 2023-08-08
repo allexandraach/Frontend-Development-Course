@@ -362,9 +362,9 @@ select {
 }
 
 
-label {
+/* label {
     color: var(--font-color);
-}
+} */
 
 input[type="radio"] {
     padding: 4px;

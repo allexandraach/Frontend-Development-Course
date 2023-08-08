@@ -2673,7 +2673,7 @@
       "responses": [
         {
           "id": 1,
-          "response": " Quito",
+          "response": "Quito",
           "isCorrect": false
         },
         {
@@ -3491,7 +3491,7 @@
       "responses": [
         {
           "id": 1,
-          "response": "White Fang",
+          "response": "Colț Alb",
           "isCorrect": false
         },
         {
@@ -3501,7 +3501,7 @@
         },
         {
           "id": 3,
-          "response": "The Bible",
+          "response": "Biblia",
           "isCorrect": true
         }
       ]
@@ -3556,7 +3556,7 @@
     },
     {
       "id": 14,
-      "question": " Cine este cel mai cunoscut autor român contemporan?",
+      "question": "Cine este cel mai cunoscut autor român contemporan?",
       "difficulty": "Easy",
       "category": "Humanities",
       "domain": "Literature",
@@ -3628,7 +3628,7 @@
     },
     {
       "id": 17,
-      "question": " Cine a inventat Complexul Oedip și, respectiv, Complexul Electra?",
+      "question": "Cine a inventat Complexul Oedip și, respectiv, Complexul Electra?",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Psychology",
@@ -3659,24 +3659,24 @@
       "responses": [
         {
           "id": 1,
-          "response": " arhetipuri jungiene ",
+          "response": "Arhetipurile lui Jung",
           "isCorrect": false
         },
         {
           "id": 2,
-          "response": " Teoria atașamentului ",
+          "response": "Teoria atașamentului",
           "isCorrect": false
         },
         {
           "id": 3,
-          "response": "Teoria celor patru temperamente ",
+          "response": "Teoria celor patru temperamente",
           "isCorrect": true
         }
       ]
     },
     {
       "id": 19,
-      "question": " Cine este cel mai faimos psiholog?",
+      "question": "Cine este cel mai faimos psiholog?",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Psychology",
@@ -3700,7 +3700,7 @@
     },
     {
       "id": 20,
-      "question": " Care este cea mai frecvent întâlnită tulburare mentală?",
+      "question": "Care este cea mai frecvent întâlnită tulburare mentală?",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Psychology",
@@ -3724,7 +3724,7 @@
     },
     {
       "id": 21,
-      "question": " Ce țară are cea mai mare populație din lume?",
+      "question": "Ce țară are cea mai mare populație din lume?",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Geography",
@@ -3748,7 +3748,7 @@
     },
     {
       "id": 22,
-      "question": " Ce oraș este cea mai mare metropolă din lume?",
+      "question": "Ce oraș este cea mai mare metropolă din lume?",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Geography",
@@ -3772,7 +3772,7 @@
     },
     {
       "id": 23,
-      "question": " Cum țară are cea mai mare suprafață din lume?",
+      "question": "Cum țară are cea mai mare suprafață din lume?",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Geography",
@@ -3796,7 +3796,7 @@
     },
     {
       "id": 24,
-      "question": " Care este cea mai mică capitală din Europa?",
+      "question": "Care este cea mai mică capitală din Europa?",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Geography",
@@ -3820,7 +3820,7 @@
     },
     {
       "id": 25,
-      "question": " Selectează cea mai mică țară din lume!",
+      "question": "Selectează cea mai mică țară din lume!",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Geography",
@@ -3844,24 +3844,24 @@
     },
     {
       "id": 26,
-      "question": " Selectează cea mai tranzacționată monedă din lume!",
+      "question": "Selectează cea mai tranzacționată monedă din lume.",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Economics",
       "responses": [
         {
           "id": 1,
-          "response": " Dolar American",
+          "response": "Dolarul american",
           "isCorrect": true
         },
         {
           "id": 2,
-          "response": " Yen Japonez ",
+          "response": "Yuanul chinezesc",
           "isCorrect": false
         },
         {
           "id": 3,
-          "response": " Yen Japonez ",
+          "response": "Yenul japonez",
           "isCorrect": false
         }
       ]
@@ -3892,14 +3892,14 @@
     },
     {
       "id": 28,
-      "question": " Ce țara este catalogată ca “motorul” Europei?",
+      "question": "Ce țara este catalogată ca “motorul” Europei?",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Economics",
       "responses": [
         {
           "id": 1,
-          "response": " Regatul Unit ",
+          "response": "Regatul Unit",
           "isCorrect": false
         },
         {
@@ -3916,7 +3916,7 @@
     },
     {
       "id": 29,
-      "question": " Selectează cel mai bogat oraș din lume!",
+      "question": "Selectează cel mai bogat oraș din lume!",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Economics",
@@ -3928,7 +3928,7 @@
         },
         {
           "id": 2,
-          "response": "Tokyo",
+          "response": "Tokio",
           "isCorrect": false
         },
         {
@@ -3940,14 +3940,14 @@
     },
     {
       "id": 30,
-      "question": " Selectează țara ce detine cel mai mare procent de import din lume!",
+      "question": "Selectează țara ce are cel mai mare procent de import din lume!",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Economics",
       "responses": [
         {
           "id": 1,
-          "response": "Germany",
+          "response": "Germania",
           "isCorrect": false
         },
         {
@@ -3964,7 +3964,7 @@
     },
     {
       "id": 31,
-      "question": " Cum se numesc cei mai înalți munți din lume?",
+      "question": "Cum se numesc cei mai înalți munți din lume?",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Geology",
@@ -3988,7 +3988,7 @@
     },
     {
       "id": 32,
-      "question": " Care este cel mai mic continent din lume?",
+      "question": "Care este cel mai mic continent din lume?",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Geology",
@@ -4012,7 +4012,7 @@
     },
     {
       "id": 33,
-      "question": " Selectează cel mai mare bazin oceanic din lume!",
+      "question": "Selectează cel mai mare bazin oceanic din lume!",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Geology",
@@ -4036,7 +4036,7 @@
     },
     {
       "id": 34,
-      "question": " Selectează cel mai mare continent de pe Terra!",
+      "question": "Selectează cel mai mare continent de pe Terra!",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Geology",
@@ -4060,7 +4060,7 @@
     },
     {
       "id": 35,
-      "question": " Cum se numește cel mai adânc șanț oceanic de pe Terra?",
+      "question": "Cum se numește cel mai adânc rift oceanic de pe pământ?",
       "difficulty": "Easy",
       "category": "Social Sciences",
       "domain": "Geology",
@@ -4084,7 +4084,7 @@
     },
     {
       "id": 36,
-      "question": " Cum se numesc primii oameni moderni?",
+      "question": "Cum se numește specia de oameni moderni?",
       "difficulty": "Easy",
       "category": "Natural Sciences",
       "domain": "Biology",
@@ -4108,7 +4108,7 @@
     },
     {
       "id": 37,
-      "question": " Care este cel mai mare animal de pe Terra?",
+      "question": "Care este cel mai mare animal de pe Pământ?",
       "difficulty": "Easy",
       "category": "Natural Sciences",
       "domain": "Biology",
@@ -4120,12 +4120,12 @@
         },
         {
           "id": 2,
-          "response": " Balenele albastre ",
+          "response": "Balenele albastre",
           "isCorrect": true
         },
         {
           "id": 3,
-          "response": " Caşalotul",
+          "response": "Caşalotul",
           "isCorrect": false
         }
       ]
@@ -4156,14 +4156,14 @@
     },
     {
       "id": 39,
-      "question": " Selectează cel mai inteligent animal din ocean!",
+      "question": "Selectează cel mai inteligent animal din ocean!",
       "difficulty": "Easy",
       "category": "Natural Sciences",
       "domain": "Biology",
       "responses": [
         {
           "id": 1,
-          "response": " Vidra de mare ",
+          "response": "Vidra de mare",
           "isCorrect": false
         },
         {
@@ -4180,7 +4180,7 @@
     },
     {
       "id": 40,
-      "question": " Care este cel mai rapid animal din lume?",
+      "question": "Care este cel mai rapid animal din lume?",
       "difficulty": "Easy",
       "category": "Natural Sciences",
       "domain": "Biology",
@@ -4204,7 +4204,7 @@
     },
     {
       "id": 41,
-      "question": " Selectează planeta de cea mai mare dimensiune din sistemul nostru solar!",
+      "question": "Selectează planeta de cea mai mare dimensiune din sistemul nostru solar!",
       "difficulty": "Easy",
       "category": "Natural Sciences",
       "domain": "Astronomy",
@@ -4228,7 +4228,7 @@
     },
     {
       "id": 42,
-      "question": " Care este cea mai rece planetă din sistemul nostru solar?",
+      "question": "Care este cea mai rece planetă din sistemul nostru solar?",
       "difficulty": "Easy",
       "category": "Natural Sciences",
       "domain": "Astronomy",
@@ -4252,7 +4252,7 @@
     },
     {
       "id": 43,
-      "question": " Selectează viteza cu cea mai mare velocitate din Univers!",
+      "question": "Selectează viteza cu cea mai mare velocitate din Univers!",
       "difficulty": "Easy",
       "category": "Natural Sciences",
       "domain": "Astronomy",
@@ -4276,7 +4276,7 @@
     },
     {
       "id": 44,
-      "question": " Ce planetă din sistemul nostru solar seamănă cel mai mult cu Pământul?",
+      "question": "Ce planetă din sistemul nostru solar seamănă cel mai mult cu Pământul?",
       "difficulty": "Easy",
       "category": "Natural Sciences",
       "domain": "Astronomy",
@@ -4300,7 +4300,7 @@
     },
     {
       "id": 45,
-      "question": " Selectează planeta cu cea mai ridicată temperatură din sistemul nostru solar!",
+      "question": "Selectează planeta cu cea mai ridicată temperatură din sistemul nostru solar!",
       "difficulty": "Easy",
       "category": "Natural Sciences",
       "domain": "Astronomy",
@@ -4324,38 +4324,38 @@
     },
     {
       "id": 46,
-      "question": " Care este cea mai veche dinastie continuă din lume?",
+      "question": "Care este cea mai veche dinastie continuă din lume?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "History",
       "responses": [
         {
           "id": 1,
-          "response": " Casa Imperială a Japoniei (Dinastia Yamato)",
+          "response": "Casa Imperială a Japoniei (Dinastia Yamato)",
           "isCorrect": true
         },
         {
           "id": 2,
-          "response": " Dinastia Chola ",
+          "response": "Dinastia Chola",
           "isCorrect": false
         },
         {
           "id": 3,
-          "response": " Dinastia Qin ",
+          "response": "Dinastia Qin",
           "isCorrect": false
         }
       ]
     },
     {
       "id": 47,
-      "question": " Cine a fost prima persoană care a efectuat înconjurul lumii?",
+      "question": "Cine a fost prima persoană care a efectuat înconjurul lumii?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "History",
       "responses": [
         {
           "id": 1,
-          "response": " Cristofor Columb ",
+          "response": "Cristofor Columb",
           "isCorrect": false
         },
         {
@@ -4372,7 +4372,7 @@
     },
     {
       "id": 48,
-      "question": " Ce țară a acordat pentru prima dată femeilor dreptul la vot?",
+      "question": "Ce țară a acordat pentru prima dată femeilor dreptul la vot?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "History",
@@ -4396,7 +4396,7 @@
     },
     {
       "id": 49,
-      "question": " Unde a apărut prima civilizație?",
+      "question": "Unde a apărut prima civilizație?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "History",
@@ -4420,7 +4420,7 @@
     },
     {
       "id": 50,
-      "question": " Care este cel mai vechi monument din lume?",
+      "question": "Care este cel mai vechi monument din lume?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "History",
@@ -4437,14 +4437,14 @@
         },
         {
           "id": 3,
-          "response": " Marea Piramidă din Giza ",
+          "response": "Marea Piramidă din Giza",
           "isCorrect": false
         }
       ]
     },
     {
       "id": 51,
-      "question": " Cine a fost unul dintre cei mai de seamă gânditori ai Iluminismului?",
+      "question": "Cine a fost unul dintre cei mai de seamă gânditori ai Iluminismului?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "Philosophy",
@@ -4468,14 +4468,14 @@
     },
     {
       "id": 52,
-      "question": " Cine a fost considerat si acceptat ca prim filosof de sex feminin?",
+      "question": "Cine a fost considerat si acceptat ca prim filosof de sex feminin?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "Philosophy",
       "responses": [
         {
           "id": 1,
-          "response": " Hypatia din Alexandria ",
+          "response": "Hypatia din Alexandria",
           "isCorrect": true
         },
         {
@@ -4492,7 +4492,7 @@
     },
     {
       "id": 53,
-      "question": " Cine este cunoscut ca părintele filosofiei moderne?",
+      "question": "Cine este cunoscut ca părintele filosofiei moderne?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "Philosophy",
@@ -4516,7 +4516,7 @@
     },
     {
       "id": 54,
-      "question": " Cine a fost cel mai mare filosof oriental?",
+      "question": "Cine a fost cel mai mare filosof oriental?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "Philosophy",
@@ -4540,7 +4540,7 @@
     },
     {
       "id": 55,
-      "question": " Cine este considerat ca un ‘filosof notoriu de greu de înțeles’?",
+      "question": "Cine este cunoscut drept un filosof de greu de înțeles?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "Philosophy",
@@ -4564,7 +4564,7 @@
     },
     {
       "id": 56,
-      "question": " Cine este considerat cel mai important poet rus?",
+      "question": "Cine este considerat cel mai important poet rus?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "Literature",
@@ -4588,31 +4588,31 @@
     },
     {
       "id": 57,
-      "question": " Care este cel mai lung roman din lume?",
+      "question": "Care este cel mai lung roman din lume?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "Literature",
       "responses": [
         {
           "id": 1,
-          "response": " Frații Karamazov ",
+          "response": "Frații Karamazov",
           "isCorrect": false
         },
         {
           "id": 2,
-          "response": " În căutarea timpului pierdut",
+          "response": "În căutarea timpului pierdut",
           "isCorrect": true
         },
         {
           "id": 3,
-          "response": " Povestea lui Genji ",
+          "response": "Povestea lui Genji",
           "isCorrect": false
         }
       ]
     },
     {
       "id": 58,
-      "question": " Cine este cel mai popular scriitor francez?",
+      "question": "Cine este cel mai popular scriitor francez?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "Literature",
@@ -4636,7 +4636,7 @@
     },
     {
       "id": 59,
-      "question": " Cine este cel mai faimos personaj fictiv din lume?",
+      "question": "Cine este cel mai faimos personaj fictiv din lume?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "Literature",
@@ -4660,67 +4660,67 @@
     },
     {
       "id": 60,
-      "question": " Cum se numește prima carte scrisă?",
+      "question": "Care este numele primei cărți scrise?",
       "difficulty": "Medium",
       "category": "Humanities",
       "domain": "Literature",
       "responses": [
         {
           "id": 1,
-          "response": " Coranul ",
+          "response": "Coranul",
           "isCorrect": false
         },
         {
           "id": 2,
-          "response": "Biblia ",
+          "response": "Biblia",
           "isCorrect": false
         },
         {
           "id": 3,
-          "response": " Epopeea lui Ghilgameș ",
+          "response": "Epopeea lui Ghilgameș",
           "isCorrect": true
         }
       ]
     },
     {
       "id": 61,
-      "question": " Cum se numește cea mai frecventă tulburare de personalitate?",
+      "question": "Cum se numește cea mai întâlnită tulburare de personalitate?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Psychology",
       "responses": [
         {
           "id": 1,
-          "response": " Tulburare de personalitate borderline ",
+          "response": "Borderline",
           "isCorrect": false
         },
         {
           "id": 2,
-          "response": " Tulburare de personalitate narcisistă ",
+          "response": "Narcisistă",
           "isCorrect": false
         },
         {
           "id": 3,
-          "response": " Tulburare de personalitate obsesiv-compulsivă ",
+          "response": "Obsesiv-compulsivă",
           "isCorrect": true
         }
       ]
     },
     {
       "id": 62,
-      "question": " Care este cea mai frecventă tulburare mentală din lume?",
+      "question": "Care este cea mai întâlnită tulburare mentală din lume?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Psychology",
       "responses": [
         {
           "id": 1,
-          "response": "Anxietate",
+          "response": "Anxietatea",
           "isCorrect": true
         },
         {
           "id": 2,
-          "response": "Depresie",
+          "response": "Depresia",
           "isCorrect": false
         },
         {
@@ -4732,14 +4732,14 @@
     },
     {
       "id": 63,
-      "question": " Care este cea mai puternică emoție pe care putem simți?",
+      "question": "Care este cea mai puternică emoție pe care putem simți?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Psychology",
       "responses": [
         {
           "id": 1,
-          "response": " Dragostea",
+          "response": "Iubirea",
           "isCorrect": false
         },
         {
@@ -4749,55 +4749,55 @@
         },
         {
           "id": 3,
-          "response": " Furia",
+          "response": "Furia",
           "isCorrect": false
         }
       ]
     },
     {
       "id": 64,
-      "question": " Care este cea mai gravă boală psihică?",
+      "question": "Care este cea mai gravă boală psihică?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Psychology",
       "responses": [
         {
           "id": 1,
-          "response": " Tulburare bipolară",
+          "response": "Tulburarea bipolară",
           "isCorrect": false
         },
         {
           "id": 2,
-          "response": " Schizofrenie",
+          "response": "Schizofrenia",
           "isCorrect": true
         },
         {
           "id": 3,
-          "response": " Tulburarea disociativă de personalitate",
+          "response": "Tulburarea disociativă de personalitate",
           "isCorrect": false
         }
       ]
     },
     {
       "id": 65,
-      "question": " Care este cea mai neobișnuită tulburare mentală?",
+      "question": "Care este cea mai neobișnuită tulburare mentală?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Psychology",
       "responses": [
         {
           "id": 1,
-          "response": " Tulburare disociativă de identitate",
+          "response": "Tulburarea disociativă de identitate",
           "isCorrect": true
         },
         {
           "id": 2,
-          "response": " Schizofrenie",
+          "response": "Schizofrenia",
           "isCorrect": false
         },
         {
           "id": 3,
-          "response": " Tulburare de personalitate antisocială",
+          "response": "Tulburarea de personalitate antisocială",
           "isCorrect": false
         }
       ]
@@ -4876,14 +4876,14 @@
     },
     {
       "id": 69,
-      "question": " Care este cea mai vorbită limbă din lume?",
+      "question": "Care este cea mai vorbită limbă din lume?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Geography",
       "responses": [
         {
           "id": 1,
-          "response": "Arabă",
+          "response": "Araba",
           "isCorrect": false
         },
         {
@@ -4900,31 +4900,31 @@
     },
     {
       "id": 70,
-      "question": " Care este cea mai raspândită religie din lume?",
+      "question": "Care este cea mai răspândită religie din lume?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Geography",
       "responses": [
         {
           "id": 1,
-          "response": "Islam",
+          "response": "Islamul",
           "isCorrect": false
         },
         {
           "id": 2,
-          "response": " Creştinism",
+          "response": "Creştinismul",
           "isCorrect": true
         },
         {
           "id": 3,
-          "response": "Iudaismul ",
+          "response": "Iudaismul",
           "isCorrect": true
         }
       ]
     },
     {
       "id": 71,
-      "question": " Care este cel mai vechi vulcan activ de pe Pământ?",
+      "question": "Care este cel mai vechi vulcan activ de pe Pământ?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Geology",
@@ -4936,7 +4936,7 @@
         },
         {
           "id": 2,
-          "response": "Vezuvius",
+          "response": "Vezuviu",
           "isCorrect": false
         },
         {
@@ -4948,31 +4948,31 @@
     },
     {
       "id": 72,
-      "question": " Selectează marea cu cea mai mare rată de salinitate!",
+      "question": "Selectează marea cu cea mai mare rată de salinitate.",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Geology",
       "responses": [
         {
           "id": 1,
-          "response": " Marea Roșie",
+          "response": "Marea Roșie",
           "isCorrect": true
         },
         {
           "id": 2,
-          "response": " Marea Moartă",
+          "response": "Marea Moartă",
           "isCorrect": false
         },
         {
           "id": 3,
-          "response": " Marea Neagră",
+          "response": "Marea Neagră",
           "isCorrect": false
         }
       ]
     },
     {
       "id": 73,
-      "question": " Cum se numește cel mai uscat deșert de pe Pământ?",
+      "question": "Cum se numește cel mai uscat deșert de pe Pământ?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Geology",
@@ -4996,55 +4996,55 @@
     },
     {
       "id": 74,
-      "question": " Selectează cel mai mare lac din lume!",
+      "question": "Selectează cel mai mare lac din lume.",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Geology",
       "responses": [
         {
           "id": 1,
-          "response": " Lacul Superior",
+          "response": "Lacul Superior",
           "isCorrect": false
         },
         {
           "id": 2,
-          "response": " Lacul Baikal ",
+          "response": "Lacul Baikal",
           "isCorrect": false
         },
         {
           "id": 3,
-          "response": " Marea Caspică",
+          "response": "Marea Caspică",
           "isCorrect": true
         }
       ]
     },
     {
       "id": 75,
-      "question": " Care este cel mai dur material de pe Terra?",
+      "question": "Care este cel mai dur material de pe pământ?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Geology",
       "responses": [
         {
           "id": 1,
-          "response": " Carbura de tungsten",
+          "response": "Carbura de tungsten",
           "isCorrect": false
         },
         {
           "id": 2,
-          "response": " Titan",
+          "response": "Titanul",
           "isCorrect": false
         },
         {
           "id": 3,
-          "response": " Diamant",
+          "response": "Diamantul",
           "isCorrect": true
         }
       ]
     },
     {
       "id": 76,
-      "question": "Care țară a inventat banii de hârtie?",
+      "question": "Care este țara care a inventat banii de hârtie?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Economics",
@@ -5068,7 +5068,7 @@
     },
     {
       "id": 77,
-      "question": " Cine este considerat a fi părintele economiei?",
+      "question": "Cine este considerat a fi părintele economiei?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Economics",
@@ -5092,19 +5092,19 @@
     },
     {
       "id": 78,
-      "question": " Care este numele primei țări capitaliste din lume?",
+      "question": "Care este numele primei țări capitaliste din lume?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Economics",
       "responses": [
         {
           "id": 1,
-          "response": "Marea Britanie ",
+          "response": "Marea Britanie",
           "isCorrect": true
         },
         {
           "id": 2,
-          "response": "Statele Unite ale Americii ",
+          "response": "Statele Unite ale Americii",
           "isCorrect": false
         },
         {
@@ -5116,7 +5116,7 @@
     },
     {
       "id": 79,
-      "question": " Care este cea mai bogată țară din lume?",
+      "question": "Care este cea mai bogată țară din lume?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Economics",
@@ -5128,7 +5128,7 @@
         },
         {
           "id": 2,
-          "response": "Luxembourg",
+          "response": "Luxemburg",
           "isCorrect": true
         },
         {
@@ -5140,7 +5140,7 @@
     },
     {
       "id": 80,
-      "question": " Ce țară are cel mare nivel de Socialism implementat?",
+      "question": "Ce țară are cel mare nivel de socialism implementat?",
       "difficulty": "Medium",
       "category": "Social Sciences",
       "domain": "Economics",
@@ -5157,14 +5157,14 @@
         },
         {
           "id": 3,
-          "response": "Suedia ",
+          "response": "Suedia",
           "isCorrect": false
         }
       ]
     },
     {
       "id": 81,
-      "question": " Care este cea mai timpurie formă de viață pe care o cunoaștem?",
+      "question": "Care este cea mai timpurie formă de viață pe care o cunoaștem?",
       "difficulty": "Medium",
       "category": "Natural Sciences",
       "domain": "Biology",
@@ -5195,12 +5195,12 @@
       "responses": [
         {
           "id": 1,
-          "response": "Femur",
+          "response": "Femurul",
           "isCorrect": true
         },
         {
           "id": 2,
-          "response": "Tibie",
+          "response": "Tibia",
           "isCorrect": false
         },
         {
@@ -5212,7 +5212,7 @@
     },
     {
       "id": 83,
-      "question": " Care este cel mai longeviv animal?",
+      "question": "Care este cel mai longeviv animal?",
       "difficulty": "Medium",
       "category": "Natural Sciences",
       "domain": "Biology",
@@ -5248,19 +5248,19 @@
         },
         {
           "id": 2,
-          "response": "Ficat",
+          "response": "Ficatul",
           "isCorrect": false
         },
         {
           "id": 3,
-          "response": " Piele",
+          "response": "Pielea",
           "isCorrect": true
         }
       ]
     },
     {
       "id": 85,
-      "question": " Care este singurul organ din corpul uman care se poate regenera singur?",
+      "question": "Care este singurul organ din corpul uman care se poate regenera singur?",
       "difficulty": "Medium",
       "category": "Natural Sciences",
       "domain": "Biology",
@@ -5272,12 +5272,12 @@
         },
         {
           "id": 2,
-          "response": " Ficatul",
+          "response": "Ficatul",
           "isCorrect": true
         },
         {
           "id": 3,
-          "response": "Țesutul de piele",
+          "response": "Pielea",
           "isCorrect": false
         }
       ]
@@ -5287,7 +5287,7 @@
       "question": "Cum se numește cea mai strălucitoare stea?",
       "difficulty": "Medium",
       "category": "Natural Sciences",
-      "domain": " Astronomy",
+      "domain": "Astronomy",
       "responses": [
         {
           "id": 1,
@@ -5301,14 +5301,14 @@
         },
         {
           "id": 3,
-          "response": " Sirius (Steaua câinelui)",
+          "response": "Sirius (Steaua câinelui)",
           "isCorrect": true
         }
       ]
     },
     {
       "id": 87,
-      "question": " Care este numele galaxiei cele mai apropiate de Calea Lactee?",
+      "question": "Care este numele galaxiei cele mai apropiate de Calea Lactee?",
       "difficulty": "Medium",
       "category": "Natural Sciences",
       "domain": "Astronomy",
@@ -5435,17 +5435,17 @@
       "responses": [
         {
           "id": 1,
-          "response": "Regele Ludovic al XIV-lea",
+          "response": "Ludovic al XIV-lea",
           "isCorrect": true
         },
         {
           "id": 2,
-          "response": "Henry VIII",
+          "response": "Henric al VIII-lea",
           "isCorrect": false
         },
         {
           "id": 3,
-          "response": "Louis XVI",
+          "response": "Ludovic al XVI-lea",
           "isCorrect": false
         }
       ]
@@ -5493,7 +5493,7 @@
         },
         {
           "id": 3,
-          "response": "Haiti (then Saint-Domingue)",
+          "response": "Haiti (atunci Saint-Domingue)",
           "isCorrect": true
         }
       ]
@@ -5531,7 +5531,7 @@
       "responses": [
         {
           "id": 1,
-          "response": " Pyrrho al lui Elis",
+          "response": "Pyrrho al lui Elis",
           "isCorrect": true
         },
         {
@@ -5675,31 +5675,31 @@
       "responses": [
         {
           "id": 1,
-          "response": "The Recuyell of the Historyes of Troye",
+          "response": "Culegere de povestiri din Troia",
           "isCorrect": false
         },
         {
           "id": 2,
-          "response": "The Diamond Sutra",
+          "response": "Sutra Diamantului",
           "isCorrect": true
         },
         {
           "id": 3,
-          "response": "The Gutenberg Bible",
+          "response": "Biblia Gutenberg",
           "isCorrect": false
         }
       ]
     },
     {
       "id": 103,
-      "question": " Care este numele celei mai interzise cărți din lume?",
+      "question": "Care este numele celei mai interzise cărți din lume?",
       "difficulty": "Hard",
       "category": "Humanities",
       "domain": "Literature",
       "responses": [
         {
           "id": 1,
-          "response": "Animal Farm",
+          "response": "Ferma Animalelor",
           "isCorrect": true
         },
         {
@@ -5709,7 +5709,7 @@
         },
         {
           "id": 3,
-          "response": "Ulysses",
+          "response": "Ulise",
           "isCorrect": false
         }
       ]
@@ -5740,14 +5740,14 @@
     },
     {
       "id": 105,
-      "question": "Cum se numește cea mai lungă poezie din lume?",
+      "question": "Cum se numește cel mai lung poem din lume?",
       "difficulty": "Hard",
       "category": "Humanities",
       "domain": "Literature",
       "responses": [
         {
           "id": 1,
-          "response": "My Blah Story",
+          "response": "Luceafărul",
           "isCorrect": false
         },
         {
@@ -5956,7 +5956,7 @@
     },
     {
       "id": 114,
-      "question": " Care este cea mai ate țară din lume?",
+      "question": "Care este cea mai ate țară din lume?",
       "difficulty": "Hard",
       "category": "Social Sciences",
       "domain": "Geography",
@@ -6040,12 +6040,12 @@
         },
         {
           "id": 2,
-          "response": " Deșertul Sahara",
+          "response": "Deșertul Sahara",
           "isCorrect": false
         },
         {
           "id": 3,
-          "response": " Deșertul Antarctic",
+          "response": "Deșertul Antarctic",
           "isCorrect": true
         }
       ]
@@ -6292,7 +6292,7 @@
     },
     {
       "id": 128,
-      "question": " Ce organ din corpul uman folosește cel mai ridicat nivel de glucoză?",
+      "question": "Ce organ din corpul uman folosește cel mai ridicat nivel de glucoză?",
       "difficulty": "Hard",
       "category": "Natural Sciences",
       "domain": "Biology",
@@ -6513,6 +6513,12 @@
       "password": "test",
       "email": "test",
       "id": 6
+    },
+    {
+      "username": "lidia",
+      "password": "nor",
+      "email": "manuela_achimov@yahoo.com",
+      "id": 7
     }
   ]
 }

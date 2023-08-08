@@ -62,11 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // }
 
 // LOGIN PAGE
-// FUTURE IMPROVEMENT: CHANGE LANGUAGE FUNCTIONALITY
 
 // FUTURE IMPROVEMENT: MAKE THE PROPERTIES PRIVATE
-
-let loginSuccessful;
 
 class User {
     username;
@@ -80,6 +77,23 @@ class User {
     }
 
     register() {
+        fetch(`${apiUsers}`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newUser)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                alert("Account created successfully!");
+                localStorage.setItem("username", this.username);
+                localStorage.setItem("password", this.password);
+                redirectTo("dashboard");
+            }
+            )
+            .catch(error => console.log('Error: ' + error))
     }
 
     authenticateUser(serverData) {
@@ -87,9 +101,7 @@ class User {
             alert("Login successfully!")
             localStorage.setItem("username", this.username);
             localStorage.setItem("password", this.password);
-            loginSuccessful = true;
             redirectTo("dashboard");
-
         } else {
             alert("Username or password is not correct. Please try again.");
         }
@@ -109,6 +121,12 @@ class LoggedUser extends User {
 
     constructor(username, password, email) {
         super(username, password, email);
+    }
+
+    welcomeUser() {
+        // display username on dashboard pageg to welcome user
+        const displayUsername = document.getElementById("displayUsername");
+        displayUsername.textContent = this.username + "!";
     }
 
     changeUsername() {
@@ -209,62 +227,57 @@ let newUsername;
 let newEmail;
 let newPassword;
 let repeatedPassword;
+let isValid;
 
 if (registerBtn) {
     registerBtn.addEventListener("click", () => {
 
-        let userInfoArray = [];
+        // validate data
 
         newUsername = document.getElementById("form3Example1cg").value;
         newEmail = document.getElementById("form3Example3cg").value;
         newPassword = document.getElementById("form3Example4cg").value;
         repeatedPassword = document.getElementById("form3Example4cdg").value;
 
-        let isValid = true;
+        isValid = true;
 
-        if (newUsername.length == 0 || newEmail.length == 0 || newPassword.length == 0 ||
-            repeatedPassword.length == 0) {
-            alert("Please fill in all the fields!");
-            isValid = false;
-        }
+        validateData(newUsername, newEmail, newPassword, repeatedPassword);
 
-        if (newPassword !== repeatedPassword) {
-            alert("Inserted passwords do not match!");
-            isValid = false;
-        }
-
-        let termsOfServiceBtn = document.getElementById("termsOfService");
-        if (!termsOfServiceBtn.checked) {
-            alert("To create an account, you must agree to the Terms of Service.");
-            isValid = false;
-        }
+        // create new account if data is valid
 
         if (isValid) {
             newUser = new User(newUsername, newPassword, newEmail);
-            console.log(newUser);
-
-            fetch(`${apiUsers}`, {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(newUser)
-            })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    alert("Account created successfully!");
-                    redirectTo("dashboard");
-                }
-                )
-                .catch(error => console.log('Error: ' + error))
-
-
+            newUser.register();
         }
 
     }
 
     )
+}
+
+function validateData(username, email, password, repeatedPassword) {
+
+    if (username.length == 0 || email.length == 0 || password.length == 0 ||
+        repeatedPassword.length == 0) {
+        alert("Please fill in all the fields!");
+        isValid = false;
+    }
+
+    if (!email.includes("@", ".")) {
+        alert("Please enter a valid e-mail address!");
+        isValid = false;
+    }
+
+    if (password !== repeatedPassword) {
+        alert("Inserted passwords do not match!");
+        isValid = false;
+    }
+
+    if (!termsOfServiceBtn.checked) {
+        alert("To create an account, you must agree to the Terms of Service.");
+        isValid = false;
+    }
+
 }
 
 // future improvements: verify that username and email are not taken
@@ -286,15 +299,12 @@ if (loginHereBtn) {
 
 // AFTER THE LOGIN
 
-const displayUsername = document.getElementById("displayUsername");
+// look for changes of the 'username' property found in Local Storage in order to accurately welcome the user
 
-if (localStorage.length) {
+if (localStorage.username.length) {
     currentUser = new LoggedUser(localStorage.getItem("username"), localStorage.getItem("password"));
     console.log(currentUser);
-
-    // DISPLAY USERNAME ON DASHBOARD PAGE TO WELCOME USER
-    displayUsername.textContent = currentUser.username + "!";
-
+    currentUser.welcomeUser();
 }
 
 // DISPLAY HEADER NAV DROPDOWN WHEN HOVERING OVER 
@@ -308,15 +318,14 @@ function displayDropdownMenu(dropdownNo) {
 
 }
 
+// HIDE HEADER NAV DROPDOWN WHEN MOVING MOUSE OUT
+
 function hideDropdownMenu(dropdownNo) {
     dropdownContainer = document.getElementsByClassName("dropdown-container")[dropdownNo];
 
     hideElem(dropdownContainer);
 
 }
-
-// HIDE HEADER NAV DROPDOWN WHEN MOVING MOUSE OUT
-
 
 
 // CHANGE THEME
@@ -419,7 +428,6 @@ function changeLanguage(lang) {
             headerNavBtn2: "Contul meu",
             changeUsernameBtn: "Schimbă numele de utilizator",
             changePasswordBtn: "Schimbă parola",
-            changeEmailBtn: "Schimbă adresa de e-mail",
             deleteAccountBtn: "Ștergere cont",
             logOutBtn: "Deconectare",
             playBtn: "Vreau să joc!",
@@ -458,7 +466,6 @@ function changeLanguage(lang) {
             headerNavBtn2: "My Account",
             changeUsernameBtn: "Change username",
             changePasswordBtn: "Change password",
-            changeEmailBtn: "Change e-mail",
             deleteAccountBtn: "Delete account",
             logOutBtn: "Logout",
             playBtn: "I want to play!",
@@ -506,30 +513,30 @@ function changeLanguage(lang) {
                 elementChildren.forEach((child) => {
                     element.removeChild(child);
                 });
-    
+
                 element.textContent = translation;
-    
+
                 elementChildren.forEach((child) => {
                     element.insertAdjacentElement("beforebegin", showUserScore);
                 });
-                
-            } 
-
-                elementChildren.forEach((child) => {
-                    element.removeChild(child);
-                });
-    
-                element.textContent = translation;
-    
-                elementChildren.forEach((child) => {
-                    element.appendChild(child);
-                });
 
             }
-           
+
+            elementChildren.forEach((child) => {
+                element.removeChild(child);
+            });
+
+            element.textContent = translation;
+
+            elementChildren.forEach((child) => {
+                element.appendChild(child);
+            });
+
         }
 
-// reallign the name of the site based on language; doesn't work when refreshing the page/first entering the website
+    }
+
+    // reallign the name of the site based on language; doesn't work when refreshing the page/first entering the website
 
     if (localStorage.getItem("language") === "ro") {
         siteName.style.margin = "2px 0 0 -127px"
